@@ -10,6 +10,8 @@
 		FDFA9CC81BB2A38B009E3E96 /* Witness.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFA9CC71BB2A38B009E3E96 /* Witness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDFA9CCF1BB2A38B009E3E96 /* Witness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA9CC41BB2A38B009E3E96 /* Witness.framework */; settings = {ASSET_TAGS = (); }; };
 		FDFA9CD41BB2A38B009E3E96 /* WitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CD31BB2A38B009E3E96 /* WitnessTests.swift */; };
+		FDFA9CDF1BB2A3AA009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; settings = {ASSET_TAGS = (); }; };
+		FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		FDFA9CCE1BB2A38B009E3E96 /* WitnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WitnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFA9CD31BB2A38B009E3E96 /* WitnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessTests.swift; sourceTree = "<group>"; };
 		FDFA9CD51BB2A38B009E3E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Witness.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 			children = (
 				FDFA9CC71BB2A38B009E3E96 /* Witness.h */,
 				FDFA9CC91BB2A38B009E3E96 /* Info.plist */,
+				FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */,
 			);
 			path = Witness;
 			sourceTree = "<group>";
@@ -142,6 +146,7 @@
 		FDFA9CBB1BB2A38B009E3E96 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Invisible Pixel";
 				TargetAttributes = {
@@ -193,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFA9CDF1BB2A3AA009E3E96 /* Witness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFA9CD41BB2A38B009E3E96 /* WitnessTests.swift in Sources */,
+				FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +309,7 @@
 		FDFA9CD91BB2A38B009E3E96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -314,12 +322,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.Witness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FDFA9CDA1BB2A38B009E3E96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

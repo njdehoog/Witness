@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CoreServices/CoreServices.h>
 
 //! Project version number for Witness.
 FOUNDATION_EXPORT double WitnessVersionNumber;
