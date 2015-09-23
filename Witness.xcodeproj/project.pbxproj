@@ -12,6 +12,8 @@
 		FDFA9CD41BB2A38B009E3E96 /* WitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CD31BB2A38B009E3E96 /* WitnessTests.swift */; };
 		FDFA9CDF1BB2A3AA009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; settings = {ASSET_TAGS = (); }; };
 		FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; settings = {ASSET_TAGS = (); }; };
+		FDFA9CE31BB2E5D6009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; settings = {ASSET_TAGS = (); }; };
+		FDFA9CE41BB2E61E009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 		FDFA9CD31BB2A38B009E3E96 /* WitnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessTests.swift; sourceTree = "<group>"; };
 		FDFA9CD51BB2A38B009E3E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Witness.swift; sourceTree = "<group>"; };
+		FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 				FDFA9CC71BB2A38B009E3E96 /* Witness.h */,
 				FDFA9CC91BB2A38B009E3E96 /* Info.plist */,
 				FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */,
+				FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */,
 			);
 			path = Witness;
 			sourceTree = "<group>";
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFA9CE31BB2E5D6009E3E96 /* EventStream.swift in Sources */,
 				FDFA9CDF1BB2A3AA009E3E96 /* Witness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFA9CE41BB2E61E009E3E96 /* EventStream.swift in Sources */,
 				FDFA9CD41BB2A38B009E3E96 /* WitnessTests.swift in Sources */,
 				FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */,
 			);

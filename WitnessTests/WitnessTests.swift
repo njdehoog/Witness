@@ -16,6 +16,7 @@ class WitnessTests: XCTestCase {
     
     var temporaryDirectory: String {
         return NSTemporaryDirectory()
+//        return NSSearchPathForDirectoriesInDomains(.DesktopDirectory, .UserDomainMask, true).first!
     }
     
     var testsDirectory: String {
@@ -23,7 +24,7 @@ class WitnessTests: XCTestCase {
     }
     
     var filePath: String {
-        return (testsDirectory as NSString).stringByAppendingPathComponent("file.temp")
+        return (testsDirectory as NSString).stringByAppendingPathComponent("file.txt")
     }
     
     override func setUp() {
@@ -47,9 +48,14 @@ class WitnessTests: XCTestCase {
     }
     
     func testThatFileCreationIsObserved() {
-        let expectation = expectationWithDescription("File creation")
-        witness = Witness(paths: [testsDirectory]) {
-            expectation.fulfill()
+        var expectation: XCTestExpectation? = expectationWithDescription("File creation")
+        witness = Witness(paths: [testsDirectory]) { events in
+            for event in events {
+                if event.flags.contains(.ItemCreated) {
+                    expectation?.fulfill()
+                    expectation = nil
+                }
+            }
         }
         fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
         waitForExpectationsWithTimeout(timeout, handler: nil)
@@ -59,7 +65,7 @@ class WitnessTests: XCTestCase {
         let expectation = expectationWithDescription("File removal")
         fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
         sleep(1)
-        witness = Witness(paths: [testsDirectory]) {
+        witness = Witness(paths: [testsDirectory]) { events in
             expectation.fulfill()
         }
         try! fileManager.removeItemAtPath(filePath)
@@ -70,7 +76,7 @@ class WitnessTests: XCTestCase {
         let expectation = expectationWithDescription("File changes")
         fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
         sleep(1)
-        witness = Witness(paths: [testsDirectory]) {
+        witness = Witness(paths: [testsDirectory]) { events in
             expectation.fulfill()
         }
         try! "Hello changes".writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)

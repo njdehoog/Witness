@@ -8,21 +8,21 @@
 
 import Foundation
 
-public typealias WitnessEventHandler = () -> ()
+public typealias FileEventHandler = (events: [FileEvent]) -> ()
 
 public struct Witness {
     let paths: [String]
-    let changeHandler: WitnessEventHandler
+    let changeHandler: FileEventHandler
     private let stream: EventStream
     
-    public init(paths: [String], changeHandler: WitnessEventHandler) {
+    public init(paths: [String], changeHandler: FileEventHandler) {
         self.paths = paths
         self.changeHandler = changeHandler
         
         self.stream = EventStream(paths: paths, changeHandler: changeHandler)
     }
     
-    public init(paths: [String], streamType: StreamType, deviceToWatch: dev_t,  changeHandler: WitnessEventHandler) {
+    public init(paths: [String], streamType: StreamType, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
         self.paths = paths
         self.changeHandler = changeHandler
         
@@ -34,59 +34,145 @@ public struct Witness {
     }
 }
 
-/**
-* The type of event stream to be used. For more information, please refer to the File System Events Programming Guide: https://developer.apple.com/library/mac/documentation/Darwin/Conceptual/FSEvents_ProgGuide/UsingtheFSEventsFramework/UsingtheFSEventsFramework.html#//apple_ref/doc/uid/TP40005289-CH4-SW6
-*/
-
-public enum StreamType {
-    case HostBased // default
-    case DiskBased
+public struct FileEvent {
+    let path: String
+    let flags: FileEventFlags
 }
 
-private class EventStream {
-    // use explicitly unwrapped optional so we can pass self as context to stream
-    private var stream: FSEventStreamRef!
-    private let changeHandler: WitnessEventHandler
-    static let latency = 1.0
+public struct FileEventFlags: OptionSetType {
+    public let rawValue: FSEventStreamEventFlags
+    public init(rawValue: FSEventStreamEventFlags) { self.rawValue = rawValue }
+    init(_ value: Int) { self.rawValue = FSEventStreamEventFlags(value) }
     
-    init(paths: [String], type: StreamType = .HostBased, deviceToWatch: dev_t = 0, changeHandler: WitnessEventHandler) {
-        self.changeHandler = changeHandler
-        
-        func callBack (stream: ConstFSEventStreamRef, clientCallbackInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIDs: UnsafePointer<FSEventStreamEventId>) -> Void {
-            let eventStream = unsafeBitCast(clientCallbackInfo, EventStream.self)
-            eventStream.changeHandler()
-        }
-        
-        var context = FSEventStreamContext()
-        context.info = unsafeBitCast(self, UnsafeMutablePointer<Void>.self)
-        
-        switch type {
-        case .HostBased:
-            stream = FSEventStreamCreate(nil, callBack, &context, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, FSEventStreamCreateFlags(kFSEventStreamCreateFlagNone))
-        case .DiskBased:
-            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, FSEventStreamCreateFlags(kFSEventStreamCreateFlagNone))
-        }
-        
-        FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode)
-        FSEventStreamStart(stream)
-    }
+    public static let None = FileEventFlags(kFSEventStreamEventFlagNone)
     
-    func flush() {
-        FSEventStreamFlushSync(stream)
-    }
+    public static let MustScanSubDirs = FileEventFlags(kFSEventStreamEventFlagMustScanSubDirs)
     
-    deinit {
-        // stop stream
-        FSEventStreamStop(stream)
-        
-        // unschedule from all run loops
-        FSEventStreamInvalidate(stream)
-        
-        // release
-        FSEventStreamRelease(stream)
-    }
+    public static let UserDropped = FileEventFlags(kFSEventStreamEventFlagUserDropped)
+    public static let KernelDropped = FileEventFlags(kFSEventStreamEventFlagKernelDropped)
+    
+    public static let EventIdsWrapped = FileEventFlags(kFSEventStreamEventFlagEventIdsWrapped)
+    
+    public static let HistoryDone = FileEventFlags(kFSEventStreamEventFlagHistoryDone)
+    
+    public static let RootChanged = FileEventFlags(kFSEventStreamEventFlagRootChanged)
+    
+    public static let Mount = FileEventFlags(kFSEventStreamEventFlagMount)
+    public static let Unmount = FileEventFlags(kFSEventStreamEventFlagUnmount)
+    
+    public static let ItemCreated = FileEventFlags(kFSEventStreamEventFlagItemCreated)
+    public static let ItemRemoved = FileEventFlags(kFSEventStreamEventFlagItemRemoved)
+    public static let ItemInodeMetaMod = FileEventFlags(kFSEventStreamEventFlagItemInodeMetaMod)
+    public static let ItemRenamed = FileEventFlags(kFSEventStreamEventFlagItemRenamed)
+    public static let ItemModified = FileEventFlags(kFSEventStreamEventFlagItemModified)
+    public static let ItemFinderInfoMod = FileEventFlags(kFSEventStreamEventFlagItemFinderInfoMod)
+    public static let ItemChangeOwner = FileEventFlags(kFSEventStreamEventFlagItemChangeOwner)
+    public static let ItemXattrMod = FileEventFlags(kFSEventStreamEventFlagItemXattrMod)
+    public static let ItemIsFile = FileEventFlags(kFSEventStreamEventFlagItemIsFile)
+    public static let ItemIsDir = FileEventFlags(kFSEventStreamEventFlagItemIsDir)
+    public static let ItemIsSymlink = FileEventFlags(kFSEventStreamEventFlagItemIsSymlink)
+    public static let ItemIsHardLink = FileEventFlags(kFSEventStreamEventFlagItemIsHardlink)
+    public static let ItemIsLastHardLink = FileEventFlags(kFSEventStreamEventFlagItemIsLastHardlink)
+    
+    public static let OwnEvent = FileEventFlags(kFSEventStreamEventFlagOwnEvent)
 }
 
-
-
-
+extension FileEventFlags: CustomStringConvertible {
+    public var description: String {
+        var strings = [String]()
+        
+        if self == .None {
+            strings.append("None")
+        }
+        
+        if (self.contains(.MustScanSubDirs)) {
+            strings.append("Must Scan Subdirectories")
+        }
+        
+        if (self.contains(.UserDropped)) {
+            strings.append("User Dropped")
+        }
+        
+        if (self.contains(.KernelDropped)) {
+            strings.append("Kernel Dropped")
+        }
+        
+        if (self.contains(.EventIdsWrapped)) {
+            strings.append("Event IDs wrapped")
+        }
+        
+        if (self.contains(.HistoryDone)) {
+            strings.append("History Done")
+        }
+        
+        if (self.contains(.RootChanged)) {
+            strings.append("Root Changed")
+        }
+        
+        if (self.contains(.Mount)) {
+            strings.append("Mount")
+        }
+        
+        if (self.contains(.Unmount)) {
+            strings.append("Unmount")
+        }
+        
+        if (self.contains(.ItemCreated)) {
+            strings.append("Item created")
+        }
+        
+        if (self.contains(.ItemRemoved)) {
+            strings.append("Item Removed")
+        }
+        
+        if (self.contains(.ItemInodeMetaMod)) {
+            strings.append("Item Inode Meta Modification")
+        }
+        
+        if (self.contains(.ItemRenamed)) {
+            strings.append("Item Renamed")
+        }
+        
+        if (self.contains(.ItemModified)) {
+            strings.append("Item Modified")
+        }
+        
+        if (self.contains(.ItemFinderInfoMod)) {
+            strings.append("Item Finder Info Modification")
+        }
+        
+        if (self.contains(.ItemChangeOwner)) {
+            strings.append("Item Change Owner")
+        }
+        
+        if (self.contains(.ItemXattrMod)) {
+            strings.append("Item Xattr Modification")
+        }
+        
+        if (self.contains(.ItemIsFile)) {
+            strings.append("Item Is File")
+        }
+        
+        if (self.contains(.ItemIsDir)) {
+            strings.append("Item Is Directory")
+        }
+        
+        if (self.contains(.ItemIsSymlink)) {
+            strings.append("Item Is Symbolic Link")
+        }
+        
+        if (self.contains(.ItemIsHardLink)) {
+            strings.append("Item Is Hard Link")
+        }
+        
+        if (self.contains(.ItemIsLastHardLink)) {
+            strings.append("Item Is Last Hard Link")
+        }
+        
+        if (self.contains(.OwnEvent)) {
+            strings.append("Own event")
+        }
+        
+        return strings.joinWithSeparator(",")
+    }
+}
