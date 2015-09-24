@@ -68,3 +68,18 @@ class EventStream {
         FSEventStreamRelease(stream)
     }
 }
+
+public struct EventStreamCreateFlags: OptionSetType {
+    public let rawValue: FSEventStreamCreateFlags
+    public init(rawValue: FSEventStreamCreateFlags) { self.rawValue = rawValue }
+    init(_ value: Int) { self.rawValue = FSEventStreamCreateFlags(value) }
+    
+    public static let None = EventStreamCreateFlags(kFSEventStreamCreateFlagNone)
+
+    public static let UseCFTypes = EventStreamCreateFlags(kFSEventStreamCreateFlagUseCFTypes)
+    public static let NoDefer = EventStreamCreateFlags(kFSEventStreamCreateFlagNoDefer)
+    public static let WatchRoot = EventStreamCreateFlags(kFSEventStreamCreateFlagWatchRoot)
+    public static let IgnoreSelf = EventStreamCreateFlags(kFSEventStreamCreateFlagIgnoreSelf)
+    public static let FileEvents = EventStreamCreateFlags(kFSEventStreamCreateFlagFileEvents)
+    public static let MarkSelf = EventStreamCreateFlags(kFSEventStreamCreateFlagMarkSelf)
+}
