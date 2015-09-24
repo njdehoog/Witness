@@ -23,9 +23,8 @@ class EventStream {
     // use explicitly unwrapped optional so we can pass self as context to stream
     private var stream: FSEventStreamRef!
     private let changeHandler: FileEventHandler
-    static let latency = 1.0
     
-    init(paths: [String], type: StreamType = .HostBased, flags: EventStreamCreateFlags = .None, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
+    init(paths: [String], type: StreamType = .HostBased, flags: EventStreamCreateFlags = .None, latency: NSTimeInterval = 1.0, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
         self.paths = paths
         self.changeHandler = changeHandler
         
@@ -49,9 +48,9 @@ class EventStream {
         
         switch type {
         case .HostBased:
-            stream = FSEventStreamCreate(nil, callBack, &context, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, combinedFlags.rawValue)
+            stream = FSEventStreamCreate(nil, callBack, &context, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
         case .DiskBased:
-            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, combinedFlags.rawValue)
+            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
         }
         
         FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode)
