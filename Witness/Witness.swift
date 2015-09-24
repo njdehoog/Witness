@@ -16,19 +16,11 @@ public struct Witness {
         return stream.paths
     }
     
-    public init(paths: [String], changeHandler: FileEventHandler) {
-        self.stream = EventStream(paths: paths, changeHandler: changeHandler)
-    }
-    
-    public init(paths: [String], flags: EventStreamCreateFlags,  changeHandler: FileEventHandler) {
+    public init(paths: [String], flags: EventStreamCreateFlags = .None,  changeHandler: FileEventHandler) {
         self.stream = EventStream(paths: paths, flags: flags, changeHandler: changeHandler)
     }
     
-    public init(paths: [String], streamType: StreamType, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
-        self.stream = EventStream(paths: paths, type: streamType, deviceToWatch: deviceToWatch, changeHandler: changeHandler)
-    }
-    
-    public init(paths: [String], streamType: StreamType, flags: EventStreamCreateFlags, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
+    public init(paths: [String], streamType: StreamType, flags: EventStreamCreateFlags = .None, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
         self.stream = EventStream(paths: paths, type: streamType, flags: flags, deviceToWatch: deviceToWatch, changeHandler: changeHandler)
     }
     

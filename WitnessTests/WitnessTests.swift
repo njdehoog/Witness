@@ -16,7 +16,6 @@ class WitnessTests: XCTestCase {
     
     var temporaryDirectory: String {
         return NSTemporaryDirectory()
-//        return NSSearchPathForDirectoriesInDomains(.DesktopDirectory, .UserDomainMask, true).first!
     }
     
     var testsDirectory: String {
@@ -47,8 +46,22 @@ class WitnessTests: XCTestCase {
         super.tearDown()
     }
     
+    func waitForPendingEvents() {
+        print("wait for pending changes...")
+
+        var didArrive = false
+        witness = Witness(paths: [testsDirectory], flags: [.NoDefer, .WatchRoot]) { events in
+            print("pending changes arrived")
+            didArrive = true
+        }
+        
+        while !didArrive {
+            CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.02, true);
+        }
+    }
+    
     func testThatFileCreationIsObserved() {
-        var expectation: XCTestExpectation? = expectationWithDescription("File creation")
+        var expectation: XCTestExpectation? = expectationWithDescription("File creation should trigger event")
         witness = Witness(paths: [testsDirectory]) { events in
             for event in events {
                 if event.flags.contains(.ItemCreated) {
@@ -62,9 +75,9 @@ class WitnessTests: XCTestCase {
     }
     
     func testThatFileRemovalIsObserved() {
-        let expectation = expectationWithDescription("File removal")
+        let expectation = expectationWithDescription("File removal should trigger event")
         fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
-        sleep(1)
+        waitForPendingEvents()
         witness = Witness(paths: [testsDirectory]) { events in
             expectation.fulfill()
         }
@@ -73,13 +86,40 @@ class WitnessTests: XCTestCase {
     }
     
     func testThatFileChangesAreObserved() {
-        let expectation = expectationWithDescription("File changes")
+        let expectation = expectationWithDescription("File changes should trigger event")
         fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
-        sleep(1)
+        waitForPendingEvents()
         witness = Witness(paths: [testsDirectory]) { events in
             expectation.fulfill()
         }
         try! "Hello changes".writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
         waitForExpectationsWithTimeout(timeout, handler: nil)
     }
+    
+    func testThatRootDirectoryIsNotObserved() {
+        let expectation = expectationWithDescription("Removing root directory should not trigger event if .WatchRoot flag is not set")
+        var didReceiveEvent = false
+        witness = Witness(paths: [testsDirectory], flags: .NoDefer) { events in
+            didReceiveEvent = true
+        }
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+            if didReceiveEvent == false {
+                expectation.fulfill()
+            }
+        }
+        
+        try! fileManager.removeItemAtPath(testsDirectory)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
+    }
+    
+    func testThatRootDirectoryIsObserved() {
+        let expectation = expectationWithDescription("Removing root directory should trigger event if .WatchRoot flag is set")
+        witness = Witness(paths: [testsDirectory], flags: .WatchRoot) { events in
+            expectation.fulfill()
+        }
+        try! fileManager.removeItemAtPath(testsDirectory)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
+    }
+
 }
