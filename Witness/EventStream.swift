@@ -18,12 +18,15 @@ public enum StreamType {
 }
 
 class EventStream {
+    let paths: [String]
+
     // use explicitly unwrapped optional so we can pass self as context to stream
     private var stream: FSEventStreamRef!
     private let changeHandler: FileEventHandler
     static let latency = 1.0
     
-    init(paths: [String], type: StreamType = .HostBased, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
+    init(paths: [String], type: StreamType = .HostBased, flags: EventStreamCreateFlags = .None, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
+        self.paths = paths
         self.changeHandler = changeHandler
         
         func callBack (stream: ConstFSEventStreamRef, clientCallbackInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIDs: UnsafePointer<FSEventStreamEventId>) -> Void {
@@ -42,11 +45,13 @@ class EventStream {
         var context = FSEventStreamContext()
         context.info = unsafeBitCast(self, UnsafeMutablePointer<Void>.self)
         
+        let combinedFlags = flags.union(.UseCFTypes)
+        
         switch type {
         case .HostBased:
-            stream = FSEventStreamCreate(nil, callBack, &context, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, FSEventStreamCreateFlags(kFSEventStreamCreateFlagUseCFTypes))
+            stream = FSEventStreamCreate(nil, callBack, &context, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, combinedFlags.rawValue)
         case .DiskBased:
-            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, FSEventStreamCreateFlags(kFSEventStreamCreateFlagUseCFTypes))
+            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), EventStream.latency, combinedFlags.rawValue)
         }
         
         FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode)
@@ -76,6 +81,7 @@ public struct EventStreamCreateFlags: OptionSetType {
     
     public static let None = EventStreamCreateFlags(kFSEventStreamCreateFlagNone)
 
+    // setting the UseCFTypes flag has no consequences, because Witness will always enable it
     public static let UseCFTypes = EventStreamCreateFlags(kFSEventStreamCreateFlagUseCFTypes)
     public static let NoDefer = EventStreamCreateFlags(kFSEventStreamCreateFlagNoDefer)
     public static let WatchRoot = EventStreamCreateFlags(kFSEventStreamCreateFlagWatchRoot)

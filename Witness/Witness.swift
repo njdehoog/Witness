@@ -11,22 +11,25 @@ import Foundation
 public typealias FileEventHandler = (events: [FileEvent]) -> ()
 
 public struct Witness {
-    let paths: [String]
-    let changeHandler: FileEventHandler
     private let stream: EventStream
+    var paths: [String] {
+        return stream.paths
+    }
     
     public init(paths: [String], changeHandler: FileEventHandler) {
-        self.paths = paths
-        self.changeHandler = changeHandler
-        
         self.stream = EventStream(paths: paths, changeHandler: changeHandler)
     }
     
+    public init(paths: [String], flags: EventStreamCreateFlags,  changeHandler: FileEventHandler) {
+        self.stream = EventStream(paths: paths, flags: flags, changeHandler: changeHandler)
+    }
+    
     public init(paths: [String], streamType: StreamType, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
-        self.paths = paths
-        self.changeHandler = changeHandler
-        
         self.stream = EventStream(paths: paths, type: streamType, deviceToWatch: deviceToWatch, changeHandler: changeHandler)
+    }
+    
+    public init(paths: [String], streamType: StreamType, flags: EventStreamCreateFlags, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
+        self.stream = EventStream(paths: paths, type: streamType, flags: flags, deviceToWatch: deviceToWatch, changeHandler: changeHandler)
     }
     
     public func flush() {

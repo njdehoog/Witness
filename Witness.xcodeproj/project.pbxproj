@@ -15,6 +15,7 @@
 		FDFA9CE31BB2E5D6009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; settings = {ASSET_TAGS = (); }; };
 		FDFA9CE41BB2E61E009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; settings = {ASSET_TAGS = (); }; };
 		FDFB0FF31BB3E27800202566 /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB0FF21BB3E27800202566 /* FileEvent.swift */; settings = {ASSET_TAGS = (); }; };
+		FDFB0FF41BB3E7E400202566 /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB0FF21BB3E27800202566 /* FileEvent.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFB0FF41BB3E7E400202566 /* FileEvent.swift in Sources */,
 				FDFA9CE41BB2E61E009E3E96 /* EventStream.swift in Sources */,
 				FDFA9CD41BB2A38B009E3E96 /* WitnessTests.swift in Sources */,
 				FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */,
