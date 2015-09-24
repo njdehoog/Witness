@@ -24,7 +24,7 @@ class EventStream {
     private var stream: FSEventStreamRef!
     private let changeHandler: FileEventHandler
     
-    init(paths: [String], type: StreamType = .HostBased, flags: EventStreamCreateFlags = .None, latency: NSTimeInterval = 1.0, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
+    init(paths: [String], type: StreamType = .HostBased, flags: EventStreamCreateFlags, latency: NSTimeInterval, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
         self.paths = paths
         self.changeHandler = changeHandler
         
