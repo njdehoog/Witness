@@ -62,6 +62,10 @@ class WitnessTests: XCTestCase {
         }
     }
     
+    func delay(interval: NSTimeInterval, block: () -> ()) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(interval * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), block)
+    }
+    
     func testThatFileCreationIsObserved() {
         var expectation: XCTestExpectation? = expectationWithDescription("File creation should trigger event")
         witness = Witness(paths: [testsDirectory]) { events in
@@ -105,12 +109,12 @@ class WitnessTests: XCTestCase {
             didReceiveEvent = true
         }
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64((WitnessTests.latency * 2) * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+        delay(WitnessTests.latency * 2) {
             if didReceiveEvent == false {
                 expectation.fulfill()
             }
         }
-        
+
         try! fileManager.removeItemAtPath(testsDirectory)
         waitForExpectationsWithTimeout(WitnessTests.expectationTimeout, handler: nil)
     }
