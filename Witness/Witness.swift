@@ -27,5 +27,9 @@ public struct Witness {
     public func flush() {
         self.stream.flush()
     }
+    
+    public func flushAsync() {
+        self.stream.flushAsync()
+    }
 }
 

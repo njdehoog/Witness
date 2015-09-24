@@ -61,6 +61,10 @@ class EventStream {
         FSEventStreamFlushSync(stream)
     }
     
+    func flushAsync() {
+        FSEventStreamFlushAsync(stream)
+    }
+    
     deinit {
         // stop stream
         FSEventStreamStop(stream)
