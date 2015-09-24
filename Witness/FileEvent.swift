@@ -9,8 +9,8 @@
 import Foundation
 
 public struct FileEvent {
-    let path: String
-    let flags: FileEventFlags
+    public let path: String
+    public let flags: FileEventFlags
 }
 
 public struct FileEventFlags: OptionSetType {
