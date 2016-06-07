@@ -7,20 +7,19 @@
 //
 
 import Cocoa
+import Witness
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+    var witness: Witness?
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        if let desktopPath = NSSearchPathForDirectoriesInDomains(.DesktopDirectory, .UserDomainMask, true).first {
+            self.witness = Witness(paths: [desktopPath], flags: .FileEvents, latency: 0.3) { events in
+                // create/delete or modify a file on the Desktop to see this event triggered
+                print("file system events received: \(events)")
+            }
+        }
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 

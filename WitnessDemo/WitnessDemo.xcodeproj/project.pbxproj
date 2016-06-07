@@ -11,7 +11,23 @@
 		FD8F2FEA1D06C87E004B9DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8F2FE91D06C87E004B9DD4 /* ViewController.swift */; };
 		FD8F2FEC1D06C87E004B9DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8F2FEB1D06C87E004B9DD4 /* Assets.xcassets */; };
 		FD8F2FEF1D06C87E004B9DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8F2FED1D06C87E004B9DD4 /* Main.storyboard */; };
+		FD8F2FFE1D06EE28004B9DD4 /* Witness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8F2FFD1D06EE27004B9DD4 /* Witness.framework */; };
+		FD8F2FFF1D06EE28004B9DD4 /* Witness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD8F2FFD1D06EE27004B9DD4 /* Witness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD8F30001D06EE28004B9DD4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FD8F2FFF1D06EE28004B9DD4 /* Witness.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD8F2FE41D06C87E004B9DD4 /* WitnessDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WitnessDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +36,7 @@
 		FD8F2FEB1D06C87E004B9DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD8F2FEE1D06C87E004B9DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD8F2FF01D06C87E004B9DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD8F2FFD1D06EE27004B9DD4 /* Witness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Witness.framework; path = ../Carthage/Build/Mac/Witness.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8F2FFE1D06EE28004B9DD4 /* Witness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +54,7 @@
 		FD8F2FDB1D06C87E004B9DD4 = {
 			isa = PBXGroup;
 			children = (
+				FD8F2FFD1D06EE27004B9DD4 /* Witness.framework */,
 				FD8F2FE61D06C87E004B9DD4 /* WitnessDemo */,
 				FD8F2FE51D06C87E004B9DD4 /* Products */,
 			);
@@ -71,6 +90,7 @@
 				FD8F2FE01D06C87E004B9DD4 /* Sources */,
 				FD8F2FE11D06C87E004B9DD4 /* Frameworks */,
 				FD8F2FE21D06C87E004B9DD4 /* Resources */,
+				FD8F30001D06EE28004B9DD4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +257,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = WitnessDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.WitnessDemo;
@@ -249,6 +273,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = WitnessDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.WitnessDemo;
@@ -275,6 +303,7 @@
 				FD8F2FF51D06C87E004B9DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
