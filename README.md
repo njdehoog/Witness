@@ -18,7 +18,11 @@ import Witness
 ### Monitor file system events
 
 ```swift
-
+if let desktopPath = NSSearchPathForDirectoriesInDomains(.DesktopDirectory, .UserDomainMask, true).first {
+    self.witness = Witness(paths: [desktopPath], flags: .FileEvents, latency: 0.3) { events in
+        print("file system events received: \(events)")
+    }
+}
 ```
 
 ## Contributing
