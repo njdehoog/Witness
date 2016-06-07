@@ -32,6 +32,7 @@ class WitnessTests: XCTestCase {
         super.setUp()
         
         // create tests directory
+        print("create tests directory at path: \(testsDirectory)")
         try! fileManager.createDirectoryAtPath(testsDirectory, withIntermediateDirectories: true, attributes: nil)
     }
     
@@ -68,7 +69,7 @@ class WitnessTests: XCTestCase {
     
     func testThatFileCreationIsObserved() {
         var expectation: XCTestExpectation? = expectationWithDescription("File creation should trigger event")
-        witness = Witness(paths: [testsDirectory]) { events in
+        witness = Witness(paths: [testsDirectory], flags: .FileEvents) { events in
             for event in events {
                 if event.flags.contains(.ItemCreated) {
                     expectation?.fulfill()
