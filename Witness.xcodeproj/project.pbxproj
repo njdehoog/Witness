@@ -62,7 +62,7 @@
 		FDFA9CBA1BB2A38B009E3E96 = {
 			isa = PBXGroup;
 			children = (
-				FDFA9CC61BB2A38B009E3E96 /* Witness */,
+				FDFA9CC61BB2A38B009E3E96 /* Sources */,
 				FDFA9CD21BB2A38B009E3E96 /* WitnessTests */,
 				FDFA9CC51BB2A38B009E3E96 /* Products */,
 			);
@@ -77,7 +77,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FDFA9CC61BB2A38B009E3E96 /* Witness */ = {
+		FDFA9CC61BB2A38B009E3E96 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				FDFA9CC71BB2A38B009E3E96 /* Witness.h */,
@@ -86,7 +86,7 @@
 				FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */,
 				FDFB0FF21BB3E27800202566 /* FileEvent.swift */,
 			);
-			path = Witness;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		FDFA9CD21BB2A38B009E3E96 /* WitnessTests */ = {
@@ -330,7 +330,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Witness/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.Witness;
@@ -351,7 +351,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Witness/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.Witness;
