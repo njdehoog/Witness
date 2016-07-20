@@ -11,9 +11,9 @@ import XCTest
 
 class WitnessTests: XCTestCase {
     static let expectationTimeout = 2.0
-    static let latency: NSTimeInterval = 0.1
+    static let latency: TimeInterval = 0.1
     
-    let fileManager = NSFileManager()
+    let fileManager = FileManager()
     var witness: Witness?
   
     var temporaryDirectory: String {
@@ -21,11 +21,11 @@ class WitnessTests: XCTestCase {
     }
     
     var testsDirectory: String {
-        return (temporaryDirectory as NSString).stringByAppendingPathComponent("WitnessTests")
+        return (temporaryDirectory as NSString).appendingPathComponent("WitnessTests")
     }
     
     var filePath: String {
-        return (testsDirectory as NSString).stringByAppendingPathComponent("file.txt")
+        return (testsDirectory as NSString).appendingPathComponent("file.txt")
     }
     
     override func setUp() {
@@ -33,7 +33,7 @@ class WitnessTests: XCTestCase {
         
         // create tests directory
         print("create tests directory at path: \(testsDirectory)")
-        try! fileManager.createDirectoryAtPath(testsDirectory, withIntermediateDirectories: true, attributes: nil)
+        try! fileManager.createDirectory(atPath: testsDirectory, withIntermediateDirectories: true, attributes: nil)
     }
     
     override func tearDown() {
@@ -42,7 +42,7 @@ class WitnessTests: XCTestCase {
         
         do {
             // remove tests directory
-            try fileManager.removeItemAtPath(testsDirectory)
+            try fileManager.removeItem(atPath: testsDirectory)
         }
         catch {}
         
@@ -59,16 +59,16 @@ class WitnessTests: XCTestCase {
         }
         
         while !didArrive {
-            CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.02, true);
+            CFRunLoopRunInMode(CFRunLoopMode.defaultMode, 0.02, true);
         }
     }
     
-    func delay(interval: NSTimeInterval, block: () -> ()) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(interval * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), block)
+    func delay(_ interval: TimeInterval, block: () -> ()) {
+        DispatchQueue.main.after(when: DispatchTime.now() + Double(Int64(interval * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: block)
     }
     
     func testThatFileCreationIsObserved() {
-        var expectation: XCTestExpectation? = expectationWithDescription("File creation should trigger event")
+        var expectation: XCTestExpectation? = self.expectation(withDescription: "File creation should trigger event")
         witness = Witness(paths: [testsDirectory], flags: .FileEvents) { events in
             for event in events {
                 if event.flags.contains(.ItemCreated) {
@@ -77,34 +77,34 @@ class WitnessTests: XCTestCase {
                 }
             }
         }
-        fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
-        waitForExpectationsWithTimeout(WitnessTests.expectationTimeout, handler: nil)
+        fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
+        waitForExpectations(withTimeout: WitnessTests.expectationTimeout, handler: nil)
     }
     
     func testThatFileRemovalIsObserved() {
-        let expectation = expectationWithDescription("File removal should trigger event")
-        fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
+        let expectation = self.expectation(withDescription: "File removal should trigger event")
+        fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
         waitForPendingEvents()
         witness = Witness(paths: [testsDirectory]) { events in
             expectation.fulfill()
         }
-        try! fileManager.removeItemAtPath(filePath)
-        waitForExpectationsWithTimeout(WitnessTests.expectationTimeout, handler: nil)
+        try! fileManager.removeItem(atPath: filePath)
+        waitForExpectations(withTimeout: WitnessTests.expectationTimeout, handler: nil)
     }
     
     func testThatFileChangesAreObserved() {
-        let expectation = expectationWithDescription("File changes should trigger event")
-        fileManager.createFileAtPath(filePath, contents: nil, attributes: nil)
+        let expectation = self.expectation(withDescription: "File changes should trigger event")
+        fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
         waitForPendingEvents()
         witness = Witness(paths: [testsDirectory]) { events in
             expectation.fulfill()
         }
-        try! "Hello changes".writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
-        waitForExpectationsWithTimeout(WitnessTests.expectationTimeout, handler: nil)
+        try! "Hello changes".write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
+        waitForExpectations(withTimeout: WitnessTests.expectationTimeout, handler: nil)
     }
     
     func testThatRootDirectoryIsNotObserved() {
-        let expectation = expectationWithDescription("Removing root directory should not trigger event if .WatchRoot flag is not set")
+        let expectation = self.expectation(withDescription: "Removing root directory should not trigger event if .WatchRoot flag is not set")
         var didReceiveEvent = false
         witness = Witness(paths: [testsDirectory], flags: .NoDefer) { events in
             didReceiveEvent = true
@@ -116,17 +116,17 @@ class WitnessTests: XCTestCase {
             }
         }
 
-        try! fileManager.removeItemAtPath(testsDirectory)
-        waitForExpectationsWithTimeout(WitnessTests.expectationTimeout, handler: nil)
+        try! fileManager.removeItem(atPath: testsDirectory)
+        waitForExpectations(withTimeout: WitnessTests.expectationTimeout, handler: nil)
     }
     
     func testThatRootDirectoryIsObserved() {
-        let expectation = expectationWithDescription("Removing root directory should trigger event if .WatchRoot flag is set")
+        let expectation = self.expectation(withDescription: "Removing root directory should trigger event if .WatchRoot flag is set")
         witness = Witness(paths: [testsDirectory], flags: .WatchRoot) { events in
             expectation.fulfill()
         }
-        try! fileManager.removeItemAtPath(testsDirectory)
-        waitForExpectationsWithTimeout(WitnessTests.expectationTimeout, handler: nil)
+        try! fileManager.removeItem(atPath: testsDirectory)
+        waitForExpectations(withTimeout: WitnessTests.expectationTimeout, handler: nil)
     }
 
 }

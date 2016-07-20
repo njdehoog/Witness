@@ -16,11 +16,11 @@ public struct Witness {
         return stream.paths
     }
     
-    public init(paths: [String], flags: EventStreamCreateFlags = .None, latency: NSTimeInterval = 1.0,  changeHandler: FileEventHandler) {
+    public init(paths: [String], flags: EventStreamCreateFlags = .None, latency: TimeInterval = 1.0,  changeHandler: FileEventHandler) {
         self.stream = EventStream(paths: paths, flags: flags, latency: latency, changeHandler: changeHandler)
     }
     
-    public init(paths: [String], streamType: StreamType, flags: EventStreamCreateFlags = .None, latency: NSTimeInterval = 1.0, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
+    public init(paths: [String], streamType: StreamType, flags: EventStreamCreateFlags = .None, latency: TimeInterval = 1.0, deviceToWatch: dev_t,  changeHandler: FileEventHandler) {
         self.stream = EventStream(paths: paths, type: streamType, flags: flags, latency: latency, deviceToWatch: deviceToWatch, changeHandler: changeHandler)
     }
     
