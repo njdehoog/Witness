@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FDDD24EA1D3FAD5E00C00C39 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		FDFA9CC41BB2A38B009E3E96 /* Witness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Witness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFA9CC71BB2A38B009E3E96 /* Witness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Witness.h; sourceTree = "<group>"; };
 		FDFA9CC91BB2A38B009E3E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		FDFA9CBA1BB2A38B009E3E96 = {
 			isa = PBXGroup;
 			children = (
+				FDDD24EA1D3FAD5E00C00C39 /* Package.swift */,
 				FDFA9CC61BB2A38B009E3E96 /* Sources */,
 				FDFA9CD21BB2A38B009E3E96 /* WitnessTests */,
 				FDFA9CC51BB2A38B009E3E96 /* Products */,
