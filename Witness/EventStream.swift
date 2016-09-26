@@ -28,7 +28,11 @@ class EventStream {
         self.paths = paths
         self.changeHandler = changeHandler
         
-        func callBack (_ stream: ConstFSEventStreamRef, clientCallbackInfo: UnsafeMutableRawPointer, numEvents: Int, eventPaths: UnsafeMutableRawPointer, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIDs: UnsafePointer<FSEventStreamEventId>) -> Void {
+        func callBack (_ stream: OpaquePointer, clientCallbackInfo: UnsafeMutableRawPointer?, numEvents: Int, eventPaths: UnsafeMutableRawPointer, eventFlags: UnsafePointer<FSEventStreamEventFlags>?, eventIDs: UnsafePointer<FSEventStreamEventId>?) -> Void {
+            guard let eventFlags = eventFlags else {
+                return
+            }
+            
             let eventStream = unsafeBitCast(clientCallbackInfo, to: EventStream.self)
             let paths = unsafeBitCast(eventPaths, to: NSArray.self)
             
@@ -48,12 +52,12 @@ class EventStream {
         
         switch type {
         case .hostBased:
-            stream = FSEventStreamCreate(nil, callBack as! FSEventStreamCallback, &context, paths as CFArray, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
+            stream = FSEventStreamCreate(nil, callBack, &context, paths as CFArray, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
         case .diskBased:
-            stream = FSEventStreamCreateRelativeToDevice(nil, callBack as! FSEventStreamCallback, &context, deviceToWatch, paths as CFArray, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
+            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths as CFArray, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
         }
         
-        FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode as! CFString)
+        FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
         FSEventStreamStart(stream)
     }
     
