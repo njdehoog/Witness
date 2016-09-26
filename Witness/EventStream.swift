@@ -13,8 +13,8 @@ import Foundation
 */
 
 public enum StreamType {
-    case HostBased // default
-    case DiskBased
+    case hostBased // default
+    case diskBased
 }
 
 class EventStream {
@@ -24,13 +24,13 @@ class EventStream {
     private var stream: FSEventStreamRef!
     private let changeHandler: FileEventHandler
     
-    init(paths: [String], type: StreamType = .HostBased, flags: EventStreamCreateFlags, latency: NSTimeInterval, deviceToWatch: dev_t = 0, changeHandler: FileEventHandler) {
+    init(paths: [String], type: StreamType = .hostBased, flags: EventStreamCreateFlags, latency: TimeInterval, deviceToWatch: dev_t = 0, changeHandler: @escaping FileEventHandler) {
         self.paths = paths
         self.changeHandler = changeHandler
         
-        func callBack (stream: ConstFSEventStreamRef, clientCallbackInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIDs: UnsafePointer<FSEventStreamEventId>) -> Void {
-            let eventStream = unsafeBitCast(clientCallbackInfo, EventStream.self)
-            let paths = unsafeBitCast(eventPaths, NSArray.self)
+        func callBack (_ stream: ConstFSEventStreamRef, clientCallbackInfo: UnsafeMutableRawPointer, numEvents: Int, eventPaths: UnsafeMutableRawPointer, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIDs: UnsafePointer<FSEventStreamEventId>) -> Void {
+            let eventStream = unsafeBitCast(clientCallbackInfo, to: EventStream.self)
+            let paths = unsafeBitCast(eventPaths, to: NSArray.self)
             
             var events = [FileEvent]()
             for i in 0..<Int(numEvents) {
@@ -38,22 +38,22 @@ class EventStream {
                 events.append(event)
             }
             
-            eventStream.changeHandler(events: events)
+            eventStream.changeHandler(events)
         }
         
         var context = FSEventStreamContext()
-        context.info = unsafeBitCast(self, UnsafeMutablePointer<Void>.self)
+        context.info = unsafeBitCast(self, to: UnsafeMutableRawPointer.self)
         
         let combinedFlags = flags.union(.UseCFTypes)
         
         switch type {
-        case .HostBased:
-            stream = FSEventStreamCreate(nil, callBack, &context, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
-        case .DiskBased:
-            stream = FSEventStreamCreateRelativeToDevice(nil, callBack, &context, deviceToWatch, paths, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
+        case .hostBased:
+            stream = FSEventStreamCreate(nil, callBack as! FSEventStreamCallback, &context, paths as CFArray, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
+        case .diskBased:
+            stream = FSEventStreamCreateRelativeToDevice(nil, callBack as! FSEventStreamCallback, &context, deviceToWatch, paths as CFArray, FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency, combinedFlags.rawValue)
         }
         
-        FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode)
+        FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode as! CFString)
         FSEventStreamStart(stream)
     }
     
@@ -77,7 +77,7 @@ class EventStream {
     }
 }
 
-public struct EventStreamCreateFlags: OptionSetType {
+public struct EventStreamCreateFlags: OptionSet {
     public let rawValue: FSEventStreamCreateFlags
     public init(rawValue: FSEventStreamCreateFlags) { self.rawValue = rawValue }
     init(_ value: Int) { self.rawValue = FSEventStreamCreateFlags(value) }

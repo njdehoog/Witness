@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		FDFA9CC81BB2A38B009E3E96 /* Witness.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFA9CC71BB2A38B009E3E96 /* Witness.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDFA9CCF1BB2A38B009E3E96 /* Witness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA9CC41BB2A38B009E3E96 /* Witness.framework */; settings = {ASSET_TAGS = (); }; };
+		FDFA9CCF1BB2A38B009E3E96 /* Witness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA9CC41BB2A38B009E3E96 /* Witness.framework */; };
 		FDFA9CD41BB2A38B009E3E96 /* WitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CD31BB2A38B009E3E96 /* WitnessTests.swift */; };
-		FDFA9CDF1BB2A3AA009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; settings = {ASSET_TAGS = (); }; };
-		FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; settings = {ASSET_TAGS = (); }; };
-		FDFA9CE31BB2E5D6009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; settings = {ASSET_TAGS = (); }; };
-		FDFA9CE41BB2E61E009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; settings = {ASSET_TAGS = (); }; };
-		FDFB0FF31BB3E27800202566 /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB0FF21BB3E27800202566 /* FileEvent.swift */; settings = {ASSET_TAGS = (); }; };
-		FDFB0FF41BB3E7E400202566 /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB0FF21BB3E27800202566 /* FileEvent.swift */; settings = {ASSET_TAGS = (); }; };
+		FDFA9CDF1BB2A3AA009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; };
+		FDFA9CE01BB2A4E5009E3E96 /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CDE1BB2A3AA009E3E96 /* Witness.swift */; };
+		FDFA9CE31BB2E5D6009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; };
+		FDFA9CE41BB2E61E009E3E96 /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA9CE11BB2E2C2009E3E96 /* EventStream.swift */; };
+		FDFB0FF31BB3E27800202566 /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB0FF21BB3E27800202566 /* FileEvent.swift */; };
+		FDFB0FF41BB3E7E400202566 /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB0FF21BB3E27800202566 /* FileEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,14 +155,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Invisible Pixel";
 				TargetAttributes = {
 					FDFA9CC31BB2A38B009E3E96 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					FDFA9CCD1BB2A38B009E3E96 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -247,8 +249,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -293,8 +297,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -313,6 +319,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -335,6 +342,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -354,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.Witness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -365,6 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.WitnessTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -376,6 +386,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.WitnessTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

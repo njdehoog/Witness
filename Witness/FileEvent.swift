@@ -13,7 +13,7 @@ public struct FileEvent {
     public let flags: FileEventFlags
 }
 
-public struct FileEventFlags: OptionSetType {
+public struct FileEventFlags: OptionSet {
     public let rawValue: FSEventStreamEventFlags
     public init(rawValue: FSEventStreamEventFlags) { self.rawValue = rawValue }
     init(_ value: Int) { self.rawValue = FSEventStreamEventFlags(value) }
@@ -125,6 +125,6 @@ extension FileEventFlags: CustomStringConvertible {
             strings.append("Own event")
         }
         
-        return strings.joinWithSeparator(",")
+        return strings.joined(separator: ",")
     }
 }
