@@ -6,7 +6,8 @@ Monitor file system changes using Swift. Witness provides a wrapper around the [
 The recommended way to include Witness in your project is by using [Carthage](https://github.com/Carthage/Carthage). Simply add this line to your `Cartfile`:
 
     github "njdehoog/Witness" ~> 0.1
-
+    
+Also you can install via Swift Package Manager.
 
 ## Usage
 
