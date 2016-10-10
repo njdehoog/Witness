@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		977FFF9D1DABAB50004104BC /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/EventStream.swift /* EventStream.swift */; };
+		977FFF9E1DABAB50004104BC /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/FileEvent.swift /* FileEvent.swift */; };
+		977FFF9F1DABAB50004104BC /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Witness.swift /* Witness.swift */; };
+		_LinkFileRef_WitnessPackage_via_WitnessPackageTests /* WitnessPackage in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_WitnessPackage" /* WitnessPackage */; };
+		__src_cc_ref_Sources/EventStream.swift /* EventStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/EventStream.swift /* EventStream.swift */; };
+		__src_cc_ref_Sources/FileEvent.swift /* FileEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/FileEvent.swift /* FileEvent.swift */; };
+		__src_cc_ref_Sources/Witness.swift /* Witness.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Witness.swift /* Witness.swift */; };
+		__src_cc_ref_Sources/main.swift /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/main.swift /* main.swift */; };
+		__src_cc_ref_Tests/WitnessPackageTests/WitnessPackageTests.swift /* WitnessPackageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/WitnessPackageTests/WitnessPackageTests.swift /* WitnessPackageTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		977FFF9C1DABAB24004104BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_WitnessPackage";
+			remoteInfo = WitnessPackage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/EventStream.swift /* EventStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStream.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/FileEvent.swift /* FileEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEvent.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/Witness.swift /* Witness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Witness.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests/WitnessPackageTests/WitnessPackageTests.swift /* WitnessPackageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessPackageTests.swift; sourceTree = "<group>"; };
+		__PBXFileRef_WitnessPackage.xcodeproj/Configs/Project.xcconfig /* WitnessPackage.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WitnessPackage.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
+		"_____Product_WitnessPackage" /* WitnessPackage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = WitnessPackage; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_WitnessPackageTests" /* WitnessPackageTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = WitnessPackageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		"___LinkPhase_WitnessPackage" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		"___LinkPhase_WitnessPackageTests" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				_LinkFileRef_WitnessPackage_via_WitnessPackageTests /* WitnessPackage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		TestProducts_ /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				"_____Product_WitnessPackageTests" /* WitnessPackageTests.xctest */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		"___RootGroup_" = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Package.swift /* Package.swift */,
+				"_____Configs_" /* Configs */,
+				"_____Sources_" /* Sources */,
+				"_______Tests_" /* Tests */,
+				"____Products_" /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		"____Products_" /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TestProducts_ /* Tests */,
+				"_____Product_WitnessPackage" /* WitnessPackage */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"_____Configs_" /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_WitnessPackage.xcodeproj/Configs/Project.xcconfig /* WitnessPackage.xcodeproj/Configs/Project.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		"_____Sources_" /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_WitnessPackage" /* WitnessPackage */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_WitnessPackage" /* WitnessPackage */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/EventStream.swift /* EventStream.swift */,
+				__PBXFileRef_Sources/FileEvent.swift /* FileEvent.swift */,
+				__PBXFileRef_Sources/main.swift /* main.swift */,
+				__PBXFileRef_Sources/Witness.swift /* Witness.swift */,
+			);
+			name = WitnessPackage;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_WitnessPackageTests" /* WitnessPackageTests */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Tests/WitnessPackageTests/WitnessPackageTests.swift /* WitnessPackageTests.swift */,
+			);
+			name = WitnessPackageTests;
+			path = Tests/WitnessPackageTests;
+			sourceTree = "<group>";
+		};
+		"_______Tests_" /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_WitnessPackageTests" /* WitnessPackageTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"______Target_WitnessPackage" /* WitnessPackage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_WitnessPackage" /* Build configuration list for PBXNativeTarget "WitnessPackage" */;
+			buildPhases = (
+				CompilePhase_WitnessPackage /* Sources */,
+				"___LinkPhase_WitnessPackage" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WitnessPackage;
+			productName = WitnessPackage;
+			productReference = "_____Product_WitnessPackage" /* WitnessPackage */;
+			productType = "com.apple.product-type.tool";
+		};
+		"______Target_WitnessPackageTests" /* WitnessPackageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_WitnessPackageTests" /* Build configuration list for PBXNativeTarget "WitnessPackageTests" */;
+			buildPhases = (
+				CompilePhase_WitnessPackageTests /* Sources */,
+				"___LinkPhase_WitnessPackageTests" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				__Dependency_WitnessPackage /* PBXTargetDependency */,
+			);
+			name = WitnessPackageTests;
+			productName = WitnessPackageTests;
+			productReference = "_____Product_WitnessPackageTests" /* WitnessPackageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "WitnessPackage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = "___RootGroup_";
+			productRefGroup = "____Products_" /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"______Target_WitnessPackage" /* WitnessPackage */,
+				"______Target_WitnessPackageTests" /* WitnessPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CompilePhase_WitnessPackage /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				__src_cc_ref_Sources/EventStream.swift /* EventStream.swift in Sources */,
+				__src_cc_ref_Sources/FileEvent.swift /* FileEvent.swift in Sources */,
+				__src_cc_ref_Sources/main.swift /* main.swift in Sources */,
+				__src_cc_ref_Sources/Witness.swift /* Witness.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CompilePhase_WitnessPackageTests /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				977FFF9D1DABAB50004104BC /* EventStream.swift in Sources */,
+				977FFF9F1DABAB50004104BC /* Witness.swift in Sources */,
+				__src_cc_ref_Tests/WitnessPackageTests/WitnessPackageTests.swift /* WitnessPackageTests.swift in Sources */,
+				977FFF9E1DABAB50004104BC /* FileEvent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		__Dependency_WitnessPackage /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_WitnessPackage" /* WitnessPackage */;
+			targetProxy = 977FFF9C1DABAB24004104BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		_ReleaseConf_WitnessPackage /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		_ReleaseConf_WitnessPackageTests /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = WitnessPackage.xcodeproj/WitnessPackageTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		"___DebugConf_WitnessPackage" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"___DebugConf_WitnessPackageTests" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = WitnessPackage.xcodeproj/WitnessPackageTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"_____Release_" /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_WitnessPackage.xcodeproj/Configs/Project.xcconfig /* WitnessPackage.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		"_______Debug_" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_WitnessPackage.xcodeproj/Configs/Project.xcconfig /* WitnessPackage.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		"___RootConfs_" /* Build configuration list for PBXProject "WitnessPackage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"_______Debug_" /* Debug */,
+				"_____Release_" /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_WitnessPackage" /* Build configuration list for PBXNativeTarget "WitnessPackage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_WitnessPackage" /* Debug */,
+				_ReleaseConf_WitnessPackage /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_WitnessPackageTests" /* Build configuration list for PBXNativeTarget "WitnessPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_WitnessPackageTests" /* Debug */,
+				_ReleaseConf_WitnessPackageTests /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
+}

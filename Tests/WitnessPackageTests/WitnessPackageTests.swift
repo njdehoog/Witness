@@ -1,27 +1,19 @@
-//
-//  WitnessTests.swift
-//  WitnessTests
-//
-//  Created by Niels de Hoog on 23/09/15.
-//  Copyright © 2015 Invisible Pixel. All rights reserved.
-//
-
 import XCTest
-@testable import Witness
+@testable import WitnessPackage
 
-class WitnessTests: XCTestCase {
+class WitnessPackageTests: XCTestCase {
     static let expectationTimeout = 2.0
     static let latency: TimeInterval = 0.1
     
     let fileManager = FileManager()
     var witness: Witness?
-  
+    
     var temporaryDirectory: String {
         return NSTemporaryDirectory()
     }
     
     var testsDirectory: String {
-        return (temporaryDirectory as NSString).appendingPathComponent("WitnessTests")
+        return (temporaryDirectory as NSString).appendingPathComponent("WitnessPackageTests")
     }
     
     var filePath: String {
@@ -51,9 +43,9 @@ class WitnessTests: XCTestCase {
     
     func waitForPendingEvents() {
         print("wait for pending changes...")
-
+        
         var didArrive = false
-        witness = Witness(paths: [testsDirectory], flags: [.NoDefer, .WatchRoot], latency: WitnessTests.latency) { events in
+        witness = Witness(paths: [testsDirectory], flags: [.NoDefer, .WatchRoot], latency: WitnessPackageTests.latency) { events in
             print("pending changes arrived")
             didArrive = true
         }
@@ -78,7 +70,7 @@ class WitnessTests: XCTestCase {
             }
         }
         fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
-        waitForExpectations(timeout: WitnessTests.expectationTimeout, handler: nil)
+        waitForExpectations(timeout: WitnessPackageTests.expectationTimeout, handler: nil)
     }
     
     func testThatFileRemovalIsObserved() {
@@ -89,7 +81,7 @@ class WitnessTests: XCTestCase {
             expectation.fulfill()
         }
         try! fileManager.removeItem(atPath: filePath)
-        waitForExpectations(timeout: WitnessTests.expectationTimeout, handler: nil)
+        waitForExpectations(timeout: WitnessPackageTests.expectationTimeout, handler: nil)
     }
     
     func testThatFileChangesAreObserved() {
@@ -100,7 +92,7 @@ class WitnessTests: XCTestCase {
             expectation.fulfill()
         }
         try! "Hello changes".write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
-        waitForExpectations(timeout: WitnessTests.expectationTimeout, handler: nil)
+        waitForExpectations(timeout: WitnessPackageTests.expectationTimeout, handler: nil)
     }
     
     func testThatRootDirectoryIsNotObserved() {
@@ -110,14 +102,14 @@ class WitnessTests: XCTestCase {
             didReceiveEvent = true
         }
         
-        delay(WitnessTests.latency * 2) {
+        delay(WitnessPackageTests.latency * 2) {
             if didReceiveEvent == false {
                 expectation.fulfill()
             }
         }
-
+        
         try! fileManager.removeItem(atPath: testsDirectory)
-        waitForExpectations(timeout: WitnessTests.expectationTimeout, handler: nil)
+        waitForExpectations(timeout: WitnessPackageTests.expectationTimeout, handler: nil)
     }
     
     func testThatRootDirectoryIsObserved() {
@@ -126,7 +118,7 @@ class WitnessTests: XCTestCase {
             expectation.fulfill()
         }
         try! fileManager.removeItem(atPath: testsDirectory)
-        waitForExpectations(timeout: WitnessTests.expectationTimeout, handler: nil)
+        waitForExpectations(timeout: WitnessPackageTests.expectationTimeout, handler: nil)
     }
-
+    
 }

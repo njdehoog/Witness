@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDFA9CC31BB2A38B009E3E96"
-               BuildableName = "Witness.framework"
-               BlueprintName = "Witness"
-               ReferencedContainer = "container:Witness.xcodeproj">
+               BlueprintIdentifier = "______Target_WitnessPackage"
+               BuildableName = "WitnessPackage"
+               BlueprintName = "WitnessPackage"
+               ReferencedContainer = "container:WitnessPackage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,22 +32,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDFA9CCD1BB2A38B009E3E96"
-               BuildableName = "WitnessTests.xctest"
-               BlueprintName = "WitnessTests"
-               ReferencedContainer = "container:Witness.xcodeproj">
+               BlueprintIdentifier = "______Target_WitnessPackageTests"
+               BuildableName = "WitnessPackageTests.xctest"
+               BlueprintName = "WitnessPackageTests"
+               ReferencedContainer = "container:WitnessPackage.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDFA9CC31BB2A38B009E3E96"
-            BuildableName = "Witness.framework"
-            BlueprintName = "Witness"
-            ReferencedContainer = "container:Witness.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,15 +52,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDFA9CC31BB2A38B009E3E96"
-            BuildableName = "Witness.framework"
-            BlueprintName = "Witness"
-            ReferencedContainer = "container:Witness.xcodeproj">
+            BlueprintIdentifier = "______Target_WitnessPackage"
+            BuildableName = "WitnessPackage"
+            BlueprintName = "WitnessPackage"
+            ReferencedContainer = "container:WitnessPackage.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +71,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDFA9CC31BB2A38B009E3E96"
-            BuildableName = "Witness.framework"
-            BlueprintName = "Witness"
-            ReferencedContainer = "container:Witness.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
