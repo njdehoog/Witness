@@ -7,7 +7,7 @@ The recommended way to include Witness in your project is by using [Carthage](ht
 
     github "njdehoog/Witness" ~> 0.1
     
-Also you can install via Swift Package Manager.
+Also you can install via [Swift Package Manager](https://swift.org/package-manager/).
 
 ## Usage
 
