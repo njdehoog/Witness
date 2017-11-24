@@ -7,11 +7,6 @@ The recommended way to include Witness in your project is by using [Carthage](ht
 
     github "njdehoog/Witness" ~> 0.1
 
-
-If you're using Swift 4, point your `Cartfile` to the `swift_4` branch.
-
-    github "njdehoog/Witness" "swift_4"
-
 ## Usage
 
 Import the framework
