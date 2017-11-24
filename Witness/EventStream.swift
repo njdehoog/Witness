@@ -28,11 +28,8 @@ class EventStream {
         self.paths = paths
         self.changeHandler = changeHandler
         
-        func callBack (_ stream: OpaquePointer, clientCallbackInfo: UnsafeMutableRawPointer?, numEvents: Int, eventPaths: UnsafeMutableRawPointer, eventFlags: UnsafePointer<FSEventStreamEventFlags>?, eventIDs: UnsafePointer<FSEventStreamEventId>?) -> Void {
-            guard let eventFlags = eventFlags else {
-                return
-            }
-            
+        func callBack(stream: ConstFSEventStreamRef, clientCallbackInfo: UnsafeMutableRawPointer?, numEvents: Int, eventPaths: UnsafeMutableRawPointer, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIDs: UnsafePointer<FSEventStreamEventId>) {
+
             let eventStream = unsafeBitCast(clientCallbackInfo, to: EventStream.self)
             let paths = unsafeBitCast(eventPaths, to: NSArray.self)
             
