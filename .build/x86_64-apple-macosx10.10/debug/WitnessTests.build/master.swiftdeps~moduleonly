@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1)"
-options: "d41d22217761aa18f7e6515d52b492d9"
-build_time: [1540111527, 898762000]
-inputs:
-  "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Tests/WitnessTests/WitnessTests.swift": [1540111335, 0]

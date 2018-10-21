@@ -1,7 +1,0 @@
-version: "Apple Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1)"
-options: "c022e6b63797fcc4615f59c2963c0ff4"
-build_time: [1540111518, 10606000]
-inputs:
-  "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/EventStream.swift": [1540111335, 0]
-  "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/FileEvent.swift": [1540111335, 0]
-  "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/Witness.swift": [1540111335, 0]
