@@ -1,0 +1,865 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WitnessTests"
+provides-nominal:
+- "12WitnessTestsAAC"
+provides-member:
+- ["12WitnessTestsAAC", ""]
+provides-dynamic-lookup:
+- "delay"
+- "expectationTimeout"
+- "fileManager"
+- "filePath"
+- "latency"
+- "setUp"
+- "tearDown"
+- "temporaryDirectory"
+- "testThatFileChangesAreObserved"
+- "testThatFileCreationIsObserved"
+- "testThatFileRemovalIsObserved"
+- "testThatRootDirectoryIsNotObserved"
+- "testThatRootDirectoryIsObserved"
+- "testsDirectory"
+- "waitForPendingEvents"
+depends-top-level:
+- !private "!"
+- !private "*"
+- !private "+"
+- !private "/"
+- !private "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "CFRunLoopMode"
+- !private "CFRunLoopRunInMode"
+- "CastingPrecedence"
+- !private "DispatchQueue"
+- !private "DispatchTime"
+- !private "Double"
+- "FileManager"
+- "FloatLiteralType"
+- !private "Int64"
+- !private "IntegerLiteralType"
+- !private "NSEC_PER_SEC"
+- !private "NSString"
+- !private "NSTemporaryDirectory"
+- "String"
+- !private "StringLiteralType"
+- "TimeInterval"
+- "Witness"
+- "WitnessTests"
+- "XCTestCase"
+- !private "XCTestExpectation"
+- !private "print"
+depends-member:
+- !private ["SK", "Encoding"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "write"]
+- !private ["SB", "init"]
+- !private ["Sz", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So13CFRunLoopModea", "defaultMode"]
+- !private ["s7CVarArgP", "CFRunLoopMode"]
+- !private ["s7CVarArgP", "CFRunLoopRunInMode"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "DispatchTime"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Encoding"]
+- ["s7CVarArgP", "FileManager"]
+- !private ["s7CVarArgP", "Int64"]
+- !private ["s7CVarArgP", "NSEC_PER_SEC"]
+- !private ["s7CVarArgP", "NSTemporaryDirectory"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "Witness"]
+- !private ["s7CVarArgP", "WitnessTests"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "appendingPathComponent"]
+- !private ["s7CVarArgP", "asyncAfter"]
+- !private ["s7CVarArgP", "createDirectory"]
+- !private ["s7CVarArgP", "createFile"]
+- !private ["s7CVarArgP", "delay"]
+- !private ["s7CVarArgP", "expectation"]
+- !private ["s7CVarArgP", "expectationTimeout"]
+- !private ["s7CVarArgP", "fileManager"]
+- !private ["s7CVarArgP", "filePath"]
+- !private ["s7CVarArgP", "fulfill"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "latency"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "removeItem"]
+- !private ["s7CVarArgP", "setUp"]
+- !private ["s7CVarArgP", "tearDown"]
+- !private ["s7CVarArgP", "temporaryDirectory"]
+- !private ["s7CVarArgP", "testsDirectory"]
+- !private ["s7CVarArgP", "waitForExpectations"]
+- !private ["s7CVarArgP", "waitForPendingEvents"]
+- !private ["s7CVarArgP", "witness"]
+- !private ["s7CVarArgP", "write"]
+- !private ["Sl", "Encoding"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "write"]
+- !private ["SL", "Encoding"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "now"]
+- !private ["SL", "write"]
+- !private ["s28CustomDebugStringConvertibleP", "CFRunLoopMode"]
+- !private ["s28CustomDebugStringConvertibleP", "CFRunLoopRunInMode"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchTime"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Encoding"]
+- ["s28CustomDebugStringConvertibleP", "FileManager"]
+- !private ["s28CustomDebugStringConvertibleP", "Int64"]
+- !private ["s28CustomDebugStringConvertibleP", "NSEC_PER_SEC"]
+- !private ["s28CustomDebugStringConvertibleP", "NSTemporaryDirectory"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "Witness"]
+- !private ["s28CustomDebugStringConvertibleP", "WitnessTests"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "asyncAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "createDirectory"]
+- !private ["s28CustomDebugStringConvertibleP", "createFile"]
+- !private ["s28CustomDebugStringConvertibleP", "delay"]
+- !private ["s28CustomDebugStringConvertibleP", "expectation"]
+- !private ["s28CustomDebugStringConvertibleP", "expectationTimeout"]
+- !private ["s28CustomDebugStringConvertibleP", "fileManager"]
+- !private ["s28CustomDebugStringConvertibleP", "filePath"]
+- !private ["s28CustomDebugStringConvertibleP", "fulfill"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "latency"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "removeItem"]
+- !private ["s28CustomDebugStringConvertibleP", "setUp"]
+- !private ["s28CustomDebugStringConvertibleP", "tearDown"]
+- !private ["s28CustomDebugStringConvertibleP", "temporaryDirectory"]
+- !private ["s28CustomDebugStringConvertibleP", "testsDirectory"]
+- !private ["s28CustomDebugStringConvertibleP", "waitForExpectations"]
+- !private ["s28CustomDebugStringConvertibleP", "waitForPendingEvents"]
+- !private ["s28CustomDebugStringConvertibleP", "witness"]
+- !private ["s28CustomDebugStringConvertibleP", "write"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Encoding"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "write"]
+- !private ["s17CustomReflectableP", "Encoding"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "write"]
+- !private ["s23CustomStringConvertibleP", "CFRunLoopMode"]
+- !private ["s23CustomStringConvertibleP", "CFRunLoopRunInMode"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "DispatchTime"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Encoding"]
+- ["s23CustomStringConvertibleP", "FileManager"]
+- !private ["s23CustomStringConvertibleP", "Int64"]
+- !private ["s23CustomStringConvertibleP", "ItemCreated"]
+- !private ["s23CustomStringConvertibleP", "NSEC_PER_SEC"]
+- !private ["s23CustomStringConvertibleP", "NSTemporaryDirectory"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "Witness"]
+- !private ["s23CustomStringConvertibleP", "WitnessTests"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- !private ["s23CustomStringConvertibleP", "asyncAfter"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "createDirectory"]
+- !private ["s23CustomStringConvertibleP", "createFile"]
+- !private ["s23CustomStringConvertibleP", "delay"]
+- !private ["s23CustomStringConvertibleP", "expectation"]
+- !private ["s23CustomStringConvertibleP", "expectationTimeout"]
+- !private ["s23CustomStringConvertibleP", "fileManager"]
+- !private ["s23CustomStringConvertibleP", "filePath"]
+- !private ["s23CustomStringConvertibleP", "fulfill"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "latency"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "removeItem"]
+- !private ["s23CustomStringConvertibleP", "setUp"]
+- !private ["s23CustomStringConvertibleP", "tearDown"]
+- !private ["s23CustomStringConvertibleP", "temporaryDirectory"]
+- !private ["s23CustomStringConvertibleP", "testsDirectory"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["s23CustomStringConvertibleP", "waitForExpectations"]
+- !private ["s23CustomStringConvertibleP", "waitForPendingEvents"]
+- !private ["s23CustomStringConvertibleP", "witness"]
+- !private ["s23CustomStringConvertibleP", "write"]
+- !private ["Se", "Encoding"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "write"]
+- !private ["So18OS_dispatch_objectC", "asyncAfter"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "asyncAfter"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["8Dispatch0A4TimeV", "now"]
+- !private ["Sd", "init"]
+- !private ["SE", "Encoding"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "write"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["SQ", "CFRunLoopMode"]
+- !private ["SQ", "CFRunLoopRunInMode"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "DispatchTime"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "Encoding"]
+- !private ["SQ", "FileEvents"]
+- ["SQ", "FileManager"]
+- !private ["SQ", "Int64"]
+- !private ["SQ", "ItemCreated"]
+- !private ["SQ", "NSEC_PER_SEC"]
+- !private ["SQ", "NSTemporaryDirectory"]
+- !private ["SQ", "NoDefer"]
+- !private ["SQ", "String"]
+- !private ["SQ", "WatchRoot"]
+- !private ["SQ", "Witness"]
+- !private ["SQ", "WitnessTests"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "appendingPathComponent"]
+- !private ["SQ", "asyncAfter"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "createDirectory"]
+- !private ["SQ", "createFile"]
+- !private ["SQ", "defaultMode"]
+- !private ["SQ", "delay"]
+- !private ["SQ", "expectation"]
+- !private ["SQ", "expectationTimeout"]
+- !private ["SQ", "fileManager"]
+- !private ["SQ", "filePath"]
+- !private ["SQ", "fulfill"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "latency"]
+- !private ["SQ", "main"]
+- !private ["SQ", "now"]
+- !private ["SQ", "print"]
+- !private ["SQ", "removeItem"]
+- !private ["SQ", "setUp"]
+- !private ["SQ", "tearDown"]
+- !private ["SQ", "temporaryDirectory"]
+- !private ["SQ", "testsDirectory"]
+- !private ["SQ", "utf8"]
+- !private ["SQ", "waitForExpectations"]
+- !private ["SQ", "waitForPendingEvents"]
+- !private ["SQ", "witness"]
+- !private ["SQ", "write"]
+- !private ["7Witness22EventStreamCreateFlagsV", "FileEvents"]
+- !private ["7Witness22EventStreamCreateFlagsV", "NoDefer"]
+- !private ["7Witness22EventStreamCreateFlagsV", "WatchRoot"]
+- !private ["s25ExpressibleByArrayLiteralP", "FileEvents"]
+- !private ["s25ExpressibleByArrayLiteralP", "ItemCreated"]
+- !private ["s25ExpressibleByArrayLiteralP", "NoDefer"]
+- !private ["s25ExpressibleByArrayLiteralP", "WatchRoot"]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "appendingPathComponent"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "write"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "Encoding"]
+- !private ["s26ExpressibleByStringLiteralP", "appendingPathComponent"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "write"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Encoding"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "appendingPathComponent"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "write"]
+- !private ["7Witness9FileEventV", "flags"]
+- !private ["7Witness14FileEventFlagsV", "ItemCreated"]
+- !private ["7Witness14FileEventFlagsV", "contains"]
+- !private ["So13NSFileManagerC", "createDirectory"]
+- !private ["So13NSFileManagerC", "createFile"]
+- ["So13NSFileManagerC", "init"]
+- !private ["So13NSFileManagerC", "removeItem"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SF", "init"]
+- !private ["SH", "CFRunLoopMode"]
+- !private ["SH", "CFRunLoopRunInMode"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "DispatchTime"]
+- !private ["SH", "Double"]
+- !private ["SH", "Encoding"]
+- ["SH", "FileManager"]
+- !private ["SH", "Int64"]
+- !private ["SH", "NSEC_PER_SEC"]
+- !private ["SH", "NSTemporaryDirectory"]
+- !private ["SH", "String"]
+- !private ["SH", "Witness"]
+- !private ["SH", "WitnessTests"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "appendingPathComponent"]
+- !private ["SH", "asyncAfter"]
+- !private ["SH", "createDirectory"]
+- !private ["SH", "createFile"]
+- !private ["SH", "defaultMode"]
+- !private ["SH", "delay"]
+- !private ["SH", "expectation"]
+- !private ["SH", "expectationTimeout"]
+- !private ["SH", "fileManager"]
+- !private ["SH", "filePath"]
+- !private ["SH", "fulfill"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "latency"]
+- !private ["SH", "main"]
+- !private ["SH", "print"]
+- !private ["SH", "removeItem"]
+- !private ["SH", "setUp"]
+- !private ["SH", "tearDown"]
+- !private ["SH", "temporaryDirectory"]
+- !private ["SH", "testsDirectory"]
+- !private ["SH", "utf8"]
+- !private ["SH", "waitForExpectations"]
+- !private ["SH", "waitForPendingEvents"]
+- !private ["SH", "witness"]
+- !private ["SH", "write"]
+- !private ["s5Int64V", "init"]
+- !private ["s25LosslessStringConvertibleP", "Encoding"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "write"]
+- !private ["s10MirrorPathP", "Encoding"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "write"]
+- !private ["So8NSCodingP", "appendingPathComponent"]
+- !private ["So8NSCodingP", "write"]
+- !private ["So9NSCopyingP", "appendingPathComponent"]
+- !private ["So9NSCopyingP", "write"]
+- !private ["So21NSItemProviderReadingP", "appendingPathComponent"]
+- !private ["So21NSItemProviderReadingP", "write"]
+- !private ["So21NSItemProviderWritingP", "appendingPathComponent"]
+- !private ["So21NSItemProviderWritingP", "write"]
+- !private ["So16NSMutableCopyingP", "appendingPathComponent"]
+- !private ["So16NSMutableCopyingP", "write"]
+- !private ["So8NSObjectC", "CFRunLoopMode"]
+- !private ["So8NSObjectC", "CFRunLoopRunInMode"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- !private ["So8NSObjectC", "DispatchTime"]
+- !private ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "FileManager"]
+- !private ["So8NSObjectC", "Int64"]
+- !private ["So8NSObjectC", "NSEC_PER_SEC"]
+- !private ["So8NSObjectC", "NSString"]
+- !private ["So8NSObjectC", "NSTemporaryDirectory"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "TimeInterval"]
+- ["So8NSObjectC", "Witness"]
+- !private ["So8NSObjectC", "WitnessTests"]
+- !private ["So8NSObjectC", "XCTestExpectation"]
+- !private ["So8NSObjectC", "appendingPathComponent"]
+- !private ["So8NSObjectC", "asyncAfter"]
+- !private ["So8NSObjectC", "createDirectory"]
+- !private ["So8NSObjectC", "createFile"]
+- ["So8NSObjectC", "delay"]
+- !private ["So8NSObjectC", "expectation"]
+- ["So8NSObjectC", "expectationTimeout"]
+- ["So8NSObjectC", "fileManager"]
+- ["So8NSObjectC", "filePath"]
+- !private ["So8NSObjectC", "fulfill"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "latency"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "removeItem"]
+- ["So8NSObjectC", "setUp"]
+- ["So8NSObjectC", "tearDown"]
+- ["So8NSObjectC", "temporaryDirectory"]
+- ["So8NSObjectC", "testThatFileChangesAreObserved"]
+- ["So8NSObjectC", "testThatFileCreationIsObserved"]
+- ["So8NSObjectC", "testThatFileRemovalIsObserved"]
+- ["So8NSObjectC", "testThatRootDirectoryIsNotObserved"]
+- ["So8NSObjectC", "testThatRootDirectoryIsObserved"]
+- ["So8NSObjectC", "testsDirectory"]
+- !private ["So8NSObjectC", "waitForExpectations"]
+- ["So8NSObjectC", "waitForPendingEvents"]
+- ["So8NSObjectC", "witness"]
+- !private ["So8NSObjectC", "write"]
+- !private ["So8NSObjectP", "CFRunLoopMode"]
+- !private ["So8NSObjectP", "CFRunLoopRunInMode"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "DispatchTime"]
+- !private ["So8NSObjectP", "Double"]
+- ["So8NSObjectP", "FileManager"]
+- !private ["So8NSObjectP", "Int64"]
+- !private ["So8NSObjectP", "NSEC_PER_SEC"]
+- !private ["So8NSObjectP", "NSTemporaryDirectory"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "Witness"]
+- !private ["So8NSObjectP", "WitnessTests"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "appendingPathComponent"]
+- !private ["So8NSObjectP", "asyncAfter"]
+- !private ["So8NSObjectP", "createDirectory"]
+- !private ["So8NSObjectP", "createFile"]
+- !private ["So8NSObjectP", "delay"]
+- !private ["So8NSObjectP", "expectation"]
+- !private ["So8NSObjectP", "expectationTimeout"]
+- !private ["So8NSObjectP", "fileManager"]
+- !private ["So8NSObjectP", "filePath"]
+- !private ["So8NSObjectP", "fulfill"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "latency"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "removeItem"]
+- !private ["So8NSObjectP", "setUp"]
+- !private ["So8NSObjectP", "tearDown"]
+- !private ["So8NSObjectP", "temporaryDirectory"]
+- !private ["So8NSObjectP", "testsDirectory"]
+- !private ["So8NSObjectP", "waitForExpectations"]
+- !private ["So8NSObjectP", "waitForPendingEvents"]
+- !private ["So8NSObjectP", "witness"]
+- !private ["So8NSObjectP", "write"]
+- !private ["So19NSPasteboardReadingP", "appendingPathComponent"]
+- !private ["So19NSPasteboardReadingP", "write"]
+- !private ["So19NSPasteboardWritingP", "appendingPathComponent"]
+- !private ["So19NSPasteboardWritingP", "write"]
+- !private ["So14NSSecureCodingP", "appendingPathComponent"]
+- !private ["So14NSSecureCodingP", "write"]
+- !private ["So8NSStringC", "appendingPathComponent"]
+- !private ["So8NSStringC", "write"]
+- !private ["Sj", "init"]
+- !private ["So9OS_objectC", "asyncAfter"]
+- !private ["So9OS_objectC", "main"]
+- !private ["s9OptionSetP", "FileEvents"]
+- !private ["s9OptionSetP", "ItemCreated"]
+- !private ["s9OptionSetP", "NoDefer"]
+- !private ["s9OptionSetP", "WatchRoot"]
+- !private ["s9OptionSetP", "contains"]
+- !private ["Sm", "Encoding"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "write"]
+- !private ["SY", "FileEvents"]
+- !private ["SY", "ItemCreated"]
+- !private ["SY", "NoDefer"]
+- !private ["SY", "WatchRoot"]
+- !private ["SY", "contains"]
+- !private ["SY", "defaultMode"]
+- !private ["SY", "utf8"]
+- !private ["ST", "Encoding"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "write"]
+- !private ["s10SetAlgebraP", "FileEvents"]
+- !private ["s10SetAlgebraP", "ItemCreated"]
+- !private ["s10SetAlgebraP", "NoDefer"]
+- !private ["s10SetAlgebraP", "WatchRoot"]
+- !private ["s10SetAlgebraP", "contains"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["SS", "Encoding"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "write"]
+- !private ["Sy", "Encoding"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "write"]
+- !private ["s16TextOutputStreamP", "Encoding"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "write"]
+- !private ["s20TextOutputStreamableP", "Encoding"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "write"]
+- !private ["7WitnessAAV", "flush"]
+- !private ["7WitnessAAV", "init"]
+- !private ["12WitnessTestsAAC", "CFRunLoopMode"]
+- !private ["12WitnessTestsAAC", "CFRunLoopRunInMode"]
+- !private ["12WitnessTestsAAC", "DispatchQueue"]
+- !private ["12WitnessTestsAAC", "DispatchTime"]
+- !private ["12WitnessTestsAAC", "Double"]
+- ["12WitnessTestsAAC", "FileManager"]
+- !private ["12WitnessTestsAAC", "Int64"]
+- !private ["12WitnessTestsAAC", "NSEC_PER_SEC"]
+- !private ["12WitnessTestsAAC", "NSString"]
+- !private ["12WitnessTestsAAC", "NSTemporaryDirectory"]
+- ["12WitnessTestsAAC", "String"]
+- ["12WitnessTestsAAC", "TimeInterval"]
+- ["12WitnessTestsAAC", "Witness"]
+- !private ["12WitnessTestsAAC", "WitnessTests"]
+- !private ["12WitnessTestsAAC", "XCTestExpectation"]
+- ["12WitnessTestsAAC", "delay"]
+- !private ["12WitnessTestsAAC", "expectation"]
+- ["12WitnessTestsAAC", "expectationTimeout"]
+- ["12WitnessTestsAAC", "fileManager"]
+- ["12WitnessTestsAAC", "filePath"]
+- ["12WitnessTestsAAC", "init"]
+- ["12WitnessTestsAAC", "latency"]
+- !private ["12WitnessTestsAAC", "print"]
+- ["12WitnessTestsAAC", "setUp"]
+- ["12WitnessTestsAAC", "tearDown"]
+- ["12WitnessTestsAAC", "temporaryDirectory"]
+- ["12WitnessTestsAAC", "testThatFileChangesAreObserved"]
+- ["12WitnessTestsAAC", "testThatFileCreationIsObserved"]
+- ["12WitnessTestsAAC", "testThatFileRemovalIsObserved"]
+- ["12WitnessTestsAAC", "testThatRootDirectoryIsNotObserved"]
+- ["12WitnessTestsAAC", "testThatRootDirectoryIsObserved"]
+- ["12WitnessTestsAAC", "testsDirectory"]
+- !private ["12WitnessTestsAAC", "waitForExpectations"]
+- ["12WitnessTestsAAC", "waitForPendingEvents"]
+- ["12WitnessTestsAAC", "witness"]
+- !private ["So11XCTActivityP", "CFRunLoopMode"]
+- !private ["So11XCTActivityP", "CFRunLoopRunInMode"]
+- !private ["So11XCTActivityP", "DispatchQueue"]
+- !private ["So11XCTActivityP", "DispatchTime"]
+- !private ["So11XCTActivityP", "Double"]
+- ["So11XCTActivityP", "FileManager"]
+- !private ["So11XCTActivityP", "Int64"]
+- !private ["So11XCTActivityP", "NSEC_PER_SEC"]
+- !private ["So11XCTActivityP", "NSTemporaryDirectory"]
+- !private ["So11XCTActivityP", "String"]
+- !private ["So11XCTActivityP", "Witness"]
+- !private ["So11XCTActivityP", "WitnessTests"]
+- ["So11XCTActivityP", ""]
+- !private ["So11XCTActivityP", "delay"]
+- !private ["So11XCTActivityP", "expectation"]
+- !private ["So11XCTActivityP", "expectationTimeout"]
+- !private ["So11XCTActivityP", "fileManager"]
+- !private ["So11XCTActivityP", "filePath"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "latency"]
+- !private ["So11XCTActivityP", "print"]
+- !private ["So11XCTActivityP", "setUp"]
+- !private ["So11XCTActivityP", "tearDown"]
+- !private ["So11XCTActivityP", "temporaryDirectory"]
+- !private ["So11XCTActivityP", "testsDirectory"]
+- !private ["So11XCTActivityP", "waitForExpectations"]
+- !private ["So11XCTActivityP", "waitForPendingEvents"]
+- !private ["So11XCTActivityP", "witness"]
+- !private ["So17XCTWaiterDelegateP", "CFRunLoopMode"]
+- !private ["So17XCTWaiterDelegateP", "CFRunLoopRunInMode"]
+- !private ["So17XCTWaiterDelegateP", "DispatchQueue"]
+- !private ["So17XCTWaiterDelegateP", "DispatchTime"]
+- !private ["So17XCTWaiterDelegateP", "Double"]
+- ["So17XCTWaiterDelegateP", "FileManager"]
+- !private ["So17XCTWaiterDelegateP", "Int64"]
+- !private ["So17XCTWaiterDelegateP", "NSEC_PER_SEC"]
+- !private ["So17XCTWaiterDelegateP", "NSTemporaryDirectory"]
+- !private ["So17XCTWaiterDelegateP", "String"]
+- !private ["So17XCTWaiterDelegateP", "Witness"]
+- !private ["So17XCTWaiterDelegateP", "WitnessTests"]
+- ["So17XCTWaiterDelegateP", ""]
+- !private ["So17XCTWaiterDelegateP", "delay"]
+- !private ["So17XCTWaiterDelegateP", "expectation"]
+- !private ["So17XCTWaiterDelegateP", "expectationTimeout"]
+- !private ["So17XCTWaiterDelegateP", "fileManager"]
+- !private ["So17XCTWaiterDelegateP", "filePath"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "latency"]
+- !private ["So17XCTWaiterDelegateP", "print"]
+- !private ["So17XCTWaiterDelegateP", "setUp"]
+- !private ["So17XCTWaiterDelegateP", "tearDown"]
+- !private ["So17XCTWaiterDelegateP", "temporaryDirectory"]
+- !private ["So17XCTWaiterDelegateP", "testsDirectory"]
+- !private ["So17XCTWaiterDelegateP", "waitForExpectations"]
+- !private ["So17XCTWaiterDelegateP", "waitForPendingEvents"]
+- !private ["So17XCTWaiterDelegateP", "witness"]
+- !private ["So6XCTestC", "CFRunLoopMode"]
+- !private ["So6XCTestC", "CFRunLoopRunInMode"]
+- !private ["So6XCTestC", "DispatchQueue"]
+- !private ["So6XCTestC", "DispatchTime"]
+- !private ["So6XCTestC", "Double"]
+- ["So6XCTestC", "FileManager"]
+- !private ["So6XCTestC", "Int64"]
+- !private ["So6XCTestC", "NSEC_PER_SEC"]
+- !private ["So6XCTestC", "NSString"]
+- !private ["So6XCTestC", "NSTemporaryDirectory"]
+- ["So6XCTestC", "String"]
+- ["So6XCTestC", "TimeInterval"]
+- ["So6XCTestC", "Witness"]
+- !private ["So6XCTestC", "WitnessTests"]
+- !private ["So6XCTestC", "XCTestExpectation"]
+- ["So6XCTestC", "delay"]
+- !private ["So6XCTestC", "expectation"]
+- ["So6XCTestC", "expectationTimeout"]
+- ["So6XCTestC", "fileManager"]
+- ["So6XCTestC", "filePath"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "init"]
+- ["So6XCTestC", "latency"]
+- !private ["So6XCTestC", "print"]
+- ["So6XCTestC", "setUp"]
+- ["So6XCTestC", "tearDown"]
+- ["So6XCTestC", "temporaryDirectory"]
+- ["So6XCTestC", "testThatFileChangesAreObserved"]
+- ["So6XCTestC", "testThatFileCreationIsObserved"]
+- ["So6XCTestC", "testThatFileRemovalIsObserved"]
+- ["So6XCTestC", "testThatRootDirectoryIsNotObserved"]
+- ["So6XCTestC", "testThatRootDirectoryIsObserved"]
+- ["So6XCTestC", "testsDirectory"]
+- !private ["So6XCTestC", "waitForExpectations"]
+- ["So6XCTestC", "waitForPendingEvents"]
+- ["So6XCTestC", "witness"]
+- !private ["So10XCTestCaseC", "CFRunLoopMode"]
+- !private ["So10XCTestCaseC", "CFRunLoopRunInMode"]
+- !private ["So10XCTestCaseC", "DispatchQueue"]
+- !private ["So10XCTestCaseC", "DispatchTime"]
+- !private ["So10XCTestCaseC", "Double"]
+- ["So10XCTestCaseC", "FileManager"]
+- !private ["So10XCTestCaseC", "Int64"]
+- !private ["So10XCTestCaseC", "NSEC_PER_SEC"]
+- !private ["So10XCTestCaseC", "NSString"]
+- !private ["So10XCTestCaseC", "NSTemporaryDirectory"]
+- ["So10XCTestCaseC", "String"]
+- ["So10XCTestCaseC", "TimeInterval"]
+- ["So10XCTestCaseC", "Witness"]
+- !private ["So10XCTestCaseC", "WitnessTests"]
+- !private ["So10XCTestCaseC", "XCTestExpectation"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "delay"]
+- !private ["So10XCTestCaseC", "expectation"]
+- ["So10XCTestCaseC", "expectationTimeout"]
+- ["So10XCTestCaseC", "fileManager"]
+- ["So10XCTestCaseC", "filePath"]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "init"]
+- ["So10XCTestCaseC", "latency"]
+- !private ["So10XCTestCaseC", "print"]
+- ["So10XCTestCaseC", "setUp"]
+- ["So10XCTestCaseC", "tearDown"]
+- ["So10XCTestCaseC", "temporaryDirectory"]
+- ["So10XCTestCaseC", "testThatFileChangesAreObserved"]
+- ["So10XCTestCaseC", "testThatFileCreationIsObserved"]
+- ["So10XCTestCaseC", "testThatFileRemovalIsObserved"]
+- ["So10XCTestCaseC", "testThatRootDirectoryIsNotObserved"]
+- ["So10XCTestCaseC", "testThatRootDirectoryIsObserved"]
+- ["So10XCTestCaseC", "testsDirectory"]
+- !private ["So10XCTestCaseC", "waitForExpectations"]
+- ["So10XCTestCaseC", "waitForPendingEvents"]
+- ["So10XCTestCaseC", "witness"]
+- !private ["So17XCTestExpectationC", "fulfill"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "write"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Encoding"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "write"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "Encoding"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "write"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Encoding"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "write"]
+- !private ["s33_ExpressibleByStringInterpolationP", "Encoding"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "write"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "appendingPathComponent"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "defaultMode"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "write"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CFRunLoopMode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CFRunLoopRunInMode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "FileManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int64"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSEC_PER_SEC"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSTemporaryDirectory"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Witness"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "WitnessTests"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appendingPathComponent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "asyncAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createDirectory"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createFile"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expectation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expectationTimeout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fileManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "filePath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fulfill"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "latency"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setUp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tearDown"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "temporaryDirectory"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testsDirectory"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "waitForExpectations"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "waitForPendingEvents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "witness"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "write"]
+- !private ["s21_ObjectiveCBridgeableP", "Encoding"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "write"]
+- !private ["s20_SwiftNewtypeWrapperP", "defaultMode"]
+- !private ["s16_SwiftStringViewP", "Encoding"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "write"]
+depends-nominal:
+- !private "SK"
+- !private "SB"
+- !private "Sz"
+- !private "Sb"
+- !private "So13CFRunLoopModea"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "8Dispatch0A4TimeV"
+- !private "Sd"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- "SQ"
+- !private "7Witness22EventStreamCreateFlagsV"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "7Witness9FileEventV"
+- !private "7Witness14FileEventFlagsV"
+- "So13NSFileManagerC"
+- !private "s17FixedWidthIntegerP"
+- !private "SF"
+- "SH"
+- !private "s5Int64V"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So19NSPasteboardReadingP"
+- !private "So19NSPasteboardWritingP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- !private "So9OS_objectC"
+- !private "s9OptionSetP"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "7WitnessAAV"
+- "12WitnessTestsAAC"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "So17XCTestExpectationC"
+- !private "s18_BitwiseOperationsP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4aa4d830054ab3899b3696d4950df6c7"

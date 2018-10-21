@@ -1,0 +1,520 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "StreamType"
+- "EventStream"
+- "EventStreamCreateFlags"
+provides-nominal:
+- "7Witness10StreamTypeO"
+- "7Witness11EventStreamC"
+- "7Witness22EventStreamCreateFlagsV"
+provides-member:
+- ["7Witness10StreamTypeO", ""]
+- ["7Witness11EventStreamC", ""]
+- ["7Witness22EventStreamCreateFlagsV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "..<"
+- "=="
+- "AssignmentPrecedence"
+- !private "CFArray"
+- !private "CFRunLoopGetCurrent"
+- !private "CFRunLoopMode"
+- "CastingPrecedence"
+- !private "ConstFSEventStreamRef"
+- "EventStream"
+- "EventStreamCreateFlags"
+- !private "FSEventStreamContext"
+- !private "FSEventStreamCreate"
+- "FSEventStreamCreateFlags"
+- !private "FSEventStreamCreateRelativeToDevice"
+- !private "FSEventStreamEventFlags"
+- !private "FSEventStreamEventId"
+- !private "FSEventStreamFlushAsync"
+- !private "FSEventStreamFlushSync"
+- !private "FSEventStreamInvalidate"
+- "FSEventStreamRef"
+- !private "FSEventStreamRelease"
+- !private "FSEventStreamScheduleWithRunLoop"
+- !private "FSEventStreamStart"
+- !private "FSEventStreamStop"
+- !private "FileEvent"
+- !private "FileEventFlags"
+- "FileEventHandler"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- !private "NSArray"
+- "OptionSet"
+- "StreamType"
+- "String"
+- "TimeInterval"
+- !private "UnsafeMutableRawPointer"
+- !private "UnsafePointer"
+- "dev_t"
+- "kFSEventStreamCreateFlagFileEvents"
+- "kFSEventStreamCreateFlagIgnoreSelf"
+- "kFSEventStreamCreateFlagMarkSelf"
+- "kFSEventStreamCreateFlagNoDefer"
+- "kFSEventStreamCreateFlagNone"
+- "kFSEventStreamCreateFlagUseCFTypes"
+- "kFSEventStreamCreateFlagWatchRoot"
+- !private "kFSEventStreamEventIdSinceNow"
+- !private "unsafeBitCast"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "init"]
+- !private ["SK", "append"]
+- !private ["SK", "init"]
+- !private ["Sz", "init"]
+- !private ["So13CFRunLoopModea", "defaultMode"]
+- !private ["So13CFRunLoopModea", "rawValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", "append"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "subscript"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "rawValue"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "append"]
+- !private ["Se", "init"]
+- !private ["Se", "rawValue"]
+- !private ["SE", "append"]
+- !private ["SE", "init"]
+- !private ["SE", "rawValue"]
+- ["SQ", "ArrayLiteralElement"]
+- ["SQ", "Element"]
+- ["SQ", "EventStreamCreateFlags"]
+- !private ["SQ", "FSEventStreamCreateFlags"]
+- ["SQ", "RawValue"]
+- !private ["SQ", "UseCFTypes"]
+- ["SQ", ""]
+- ["SQ", "_Default_ArrayLiteralElement"]
+- ["SQ", "_Default_Element"]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "append"]
+- ["SQ", "contains"]
+- !private ["SQ", "defaultMode"]
+- ["SQ", "diskBased"]
+- ["SQ", "formIntersection"]
+- ["SQ", "formSymmetricDifference"]
+- ["SQ", "formUnion"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "hostBased"]
+- ["SQ", "init"]
+- ["SQ", "insert"]
+- ["SQ", "intersection"]
+- ["SQ", "isDisjoint"]
+- ["SQ", "isEmpty"]
+- ["SQ", "isSubset"]
+- ["SQ", "isSuperset"]
+- ["SQ", "kFSEventStreamCreateFlagFileEvents"]
+- ["SQ", "kFSEventStreamCreateFlagIgnoreSelf"]
+- ["SQ", "kFSEventStreamCreateFlagMarkSelf"]
+- ["SQ", "kFSEventStreamCreateFlagNoDefer"]
+- ["SQ", "kFSEventStreamCreateFlagNone"]
+- ["SQ", "kFSEventStreamCreateFlagUseCFTypes"]
+- ["SQ", "kFSEventStreamCreateFlagWatchRoot"]
+- ["SQ", "rawValue"]
+- ["SQ", "remove"]
+- !private ["SQ", "subscript"]
+- ["SQ", "subtract"]
+- ["SQ", "subtracting"]
+- ["SQ", "symmetricDifference"]
+- ["SQ", "union"]
+- ["SQ", "update"]
+- !private ["7Witness11EventStreamC", "CFArray"]
+- !private ["7Witness11EventStreamC", "CFRunLoopGetCurrent"]
+- !private ["7Witness11EventStreamC", "CFRunLoopMode"]
+- !private ["7Witness11EventStreamC", "ConstFSEventStreamRef"]
+- !private ["7Witness11EventStreamC", "EventStream"]
+- ["7Witness11EventStreamC", "EventStreamCreateFlags"]
+- !private ["7Witness11EventStreamC", "FSEventStreamContext"]
+- !private ["7Witness11EventStreamC", "FSEventStreamCreate"]
+- !private ["7Witness11EventStreamC", "FSEventStreamCreateRelativeToDevice"]
+- !private ["7Witness11EventStreamC", "FSEventStreamEventFlags"]
+- !private ["7Witness11EventStreamC", "FSEventStreamEventId"]
+- !private ["7Witness11EventStreamC", "FSEventStreamFlushAsync"]
+- !private ["7Witness11EventStreamC", "FSEventStreamFlushSync"]
+- !private ["7Witness11EventStreamC", "FSEventStreamInvalidate"]
+- ["7Witness11EventStreamC", "FSEventStreamRef"]
+- !private ["7Witness11EventStreamC", "FSEventStreamRelease"]
+- !private ["7Witness11EventStreamC", "FSEventStreamScheduleWithRunLoop"]
+- !private ["7Witness11EventStreamC", "FSEventStreamStart"]
+- !private ["7Witness11EventStreamC", "FSEventStreamStop"]
+- !private ["7Witness11EventStreamC", "FileEvent"]
+- !private ["7Witness11EventStreamC", "FileEventFlags"]
+- ["7Witness11EventStreamC", "FileEventHandler"]
+- !private ["7Witness11EventStreamC", "Int"]
+- !private ["7Witness11EventStreamC", "NSArray"]
+- ["7Witness11EventStreamC", "StreamType"]
+- ["7Witness11EventStreamC", "String"]
+- ["7Witness11EventStreamC", "TimeInterval"]
+- !private ["7Witness11EventStreamC", "UnsafeMutableRawPointer"]
+- !private ["7Witness11EventStreamC", "UnsafePointer"]
+- !private ["7Witness11EventStreamC", "changeHandler"]
+- ["7Witness11EventStreamC", "deinit"]
+- ["7Witness11EventStreamC", "dev_t"]
+- ["7Witness11EventStreamC", "flush"]
+- ["7Witness11EventStreamC", "flushAsync"]
+- ["7Witness11EventStreamC", "init"]
+- !private ["7Witness11EventStreamC", "kFSEventStreamEventIdSinceNow"]
+- ["7Witness11EventStreamC", "paths"]
+- !private ["7Witness11EventStreamC", "stream"]
+- !private ["7Witness11EventStreamC", "unsafeBitCast"]
+- ["7Witness22EventStreamCreateFlagsV", "ArrayLiteralElement"]
+- ["7Witness22EventStreamCreateFlagsV", "Element"]
+- ["7Witness22EventStreamCreateFlagsV", "EventStreamCreateFlags"]
+- ["7Witness22EventStreamCreateFlagsV", "FSEventStreamCreateFlags"]
+- ["7Witness22EventStreamCreateFlagsV", "FileEvents"]
+- ["7Witness22EventStreamCreateFlagsV", "IgnoreSelf"]
+- ["7Witness22EventStreamCreateFlagsV", "Int"]
+- ["7Witness22EventStreamCreateFlagsV", "MarkSelf"]
+- ["7Witness22EventStreamCreateFlagsV", "NoDefer"]
+- ["7Witness22EventStreamCreateFlagsV", "None"]
+- ["7Witness22EventStreamCreateFlagsV", "RawValue"]
+- ["7Witness22EventStreamCreateFlagsV", "UseCFTypes"]
+- ["7Witness22EventStreamCreateFlagsV", "WatchRoot"]
+- ["7Witness22EventStreamCreateFlagsV", "_Default_ArrayLiteralElement"]
+- ["7Witness22EventStreamCreateFlagsV", "_Default_Element"]
+- ["7Witness22EventStreamCreateFlagsV", "_Default_RawValue"]
+- ["7Witness22EventStreamCreateFlagsV", "contains"]
+- ["7Witness22EventStreamCreateFlagsV", "deinit"]
+- ["7Witness22EventStreamCreateFlagsV", "formIntersection"]
+- ["7Witness22EventStreamCreateFlagsV", "formSymmetricDifference"]
+- ["7Witness22EventStreamCreateFlagsV", "formUnion"]
+- ["7Witness22EventStreamCreateFlagsV", "init"]
+- ["7Witness22EventStreamCreateFlagsV", "insert"]
+- ["7Witness22EventStreamCreateFlagsV", "intersection"]
+- ["7Witness22EventStreamCreateFlagsV", "isDisjoint"]
+- ["7Witness22EventStreamCreateFlagsV", "isEmpty"]
+- ["7Witness22EventStreamCreateFlagsV", "isSubset"]
+- ["7Witness22EventStreamCreateFlagsV", "isSuperset"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagFileEvents"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagIgnoreSelf"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagMarkSelf"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagNoDefer"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagNone"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagUseCFTypes"]
+- ["7Witness22EventStreamCreateFlagsV", "kFSEventStreamCreateFlagWatchRoot"]
+- ["7Witness22EventStreamCreateFlagsV", "rawValue"]
+- ["7Witness22EventStreamCreateFlagsV", "remove"]
+- ["7Witness22EventStreamCreateFlagsV", "subtract"]
+- ["7Witness22EventStreamCreateFlagsV", "subtracting"]
+- ["7Witness22EventStreamCreateFlagsV", "symmetricDifference"]
+- ["7Witness22EventStreamCreateFlagsV", "union"]
+- ["7Witness22EventStreamCreateFlagsV", "update"]
+- ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- ["s25ExpressibleByArrayLiteralP", "Element"]
+- ["s25ExpressibleByArrayLiteralP", "EventStreamCreateFlags"]
+- !private ["s25ExpressibleByArrayLiteralP", "FSEventStreamCreateFlags"]
+- ["s25ExpressibleByArrayLiteralP", "RawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "UseCFTypes"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", "_Default_ArrayLiteralElement"]
+- ["s25ExpressibleByArrayLiteralP", "_Default_Element"]
+- ["s25ExpressibleByArrayLiteralP", "_Default_RawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "contains"]
+- ["s25ExpressibleByArrayLiteralP", "formIntersection"]
+- ["s25ExpressibleByArrayLiteralP", "formSymmetricDifference"]
+- ["s25ExpressibleByArrayLiteralP", "formUnion"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s25ExpressibleByArrayLiteralP", "insert"]
+- ["s25ExpressibleByArrayLiteralP", "intersection"]
+- ["s25ExpressibleByArrayLiteralP", "isDisjoint"]
+- ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- ["s25ExpressibleByArrayLiteralP", "isSubset"]
+- ["s25ExpressibleByArrayLiteralP", "isSuperset"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagFileEvents"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagIgnoreSelf"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagMarkSelf"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagNoDefer"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagNone"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagUseCFTypes"]
+- ["s25ExpressibleByArrayLiteralP", "kFSEventStreamCreateFlagWatchRoot"]
+- ["s25ExpressibleByArrayLiteralP", "rawValue"]
+- ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s25ExpressibleByArrayLiteralP", "subtract"]
+- ["s25ExpressibleByArrayLiteralP", "subtracting"]
+- ["s25ExpressibleByArrayLiteralP", "symmetricDifference"]
+- ["s25ExpressibleByArrayLiteralP", "union"]
+- ["s25ExpressibleByArrayLiteralP", "update"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "rawValue"]
+- !private ["So20FSEventStreamContextV", "info"]
+- !private ["So20FSEventStreamContextV", "init"]
+- !private ["7Witness9FileEventV", "init"]
+- !private ["7Witness14FileEventFlagsV", "deinit"]
+- !private ["7Witness14FileEventFlagsV", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["SH", ""]
+- !private ["SH", "append"]
+- !private ["SH", "defaultMode"]
+- ["SH", "diskBased"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "hostBased"]
+- !private ["SH", "init"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "subscript"]
+- !private ["s6HasherV", "combine"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "init"]
+- !private ["So7NSArrayC", "subscript"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So17NSFastEnumerationP", "subscript"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["Sj", "init"]
+- ["s9OptionSetP", "ArrayLiteralElement"]
+- ["s9OptionSetP", "Element"]
+- ["s9OptionSetP", "EventStreamCreateFlags"]
+- !private ["s9OptionSetP", "FSEventStreamCreateFlags"]
+- ["s9OptionSetP", "RawValue"]
+- !private ["s9OptionSetP", "UseCFTypes"]
+- ["s9OptionSetP", ""]
+- ["s9OptionSetP", "_Default_ArrayLiteralElement"]
+- ["s9OptionSetP", "_Default_Element"]
+- ["s9OptionSetP", "_Default_RawValue"]
+- ["s9OptionSetP", "contains"]
+- ["s9OptionSetP", "formIntersection"]
+- ["s9OptionSetP", "formSymmetricDifference"]
+- ["s9OptionSetP", "formUnion"]
+- ["s9OptionSetP", "init"]
+- ["s9OptionSetP", "insert"]
+- ["s9OptionSetP", "intersection"]
+- ["s9OptionSetP", "isDisjoint"]
+- ["s9OptionSetP", "isEmpty"]
+- ["s9OptionSetP", "isSubset"]
+- ["s9OptionSetP", "isSuperset"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagFileEvents"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagIgnoreSelf"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagMarkSelf"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagNoDefer"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagNone"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagUseCFTypes"]
+- ["s9OptionSetP", "kFSEventStreamCreateFlagWatchRoot"]
+- ["s9OptionSetP", "rawValue"]
+- ["s9OptionSetP", "remove"]
+- ["s9OptionSetP", "subtract"]
+- ["s9OptionSetP", "subtracting"]
+- ["s9OptionSetP", "symmetricDifference"]
+- ["s9OptionSetP", "union"]
+- ["s9OptionSetP", "update"]
+- !private ["Sq", "rawValue"]
+- !private ["Sk", "append"]
+- !private ["Sk", "init"]
+- !private ["Sm", "append"]
+- !private ["Sm", "init"]
+- ["SY", "ArrayLiteralElement"]
+- ["SY", "Element"]
+- ["SY", "EventStreamCreateFlags"]
+- !private ["SY", "FSEventStreamCreateFlags"]
+- ["SY", "RawValue"]
+- !private ["SY", "UseCFTypes"]
+- ["SY", ""]
+- ["SY", "_Default_ArrayLiteralElement"]
+- ["SY", "_Default_Element"]
+- ["SY", "_Default_RawValue"]
+- ["SY", "contains"]
+- !private ["SY", "defaultMode"]
+- ["SY", "formIntersection"]
+- ["SY", "formSymmetricDifference"]
+- ["SY", "formUnion"]
+- ["SY", "init"]
+- ["SY", "insert"]
+- ["SY", "intersection"]
+- ["SY", "isDisjoint"]
+- ["SY", "isEmpty"]
+- ["SY", "isSubset"]
+- ["SY", "isSuperset"]
+- ["SY", "kFSEventStreamCreateFlagFileEvents"]
+- ["SY", "kFSEventStreamCreateFlagIgnoreSelf"]
+- ["SY", "kFSEventStreamCreateFlagMarkSelf"]
+- ["SY", "kFSEventStreamCreateFlagNoDefer"]
+- ["SY", "kFSEventStreamCreateFlagNone"]
+- ["SY", "kFSEventStreamCreateFlagUseCFTypes"]
+- ["SY", "kFSEventStreamCreateFlagWatchRoot"]
+- ["SY", "rawValue"]
+- ["SY", "remove"]
+- ["SY", "subtract"]
+- ["SY", "subtracting"]
+- ["SY", "symmetricDifference"]
+- ["SY", "union"]
+- ["SY", "update"]
+- !private ["ST", "append"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
+- ["s10SetAlgebraP", "ArrayLiteralElement"]
+- ["s10SetAlgebraP", "Element"]
+- ["s10SetAlgebraP", "EventStreamCreateFlags"]
+- !private ["s10SetAlgebraP", "FSEventStreamCreateFlags"]
+- ["s10SetAlgebraP", "RawValue"]
+- !private ["s10SetAlgebraP", "UseCFTypes"]
+- ["s10SetAlgebraP", ""]
+- ["s10SetAlgebraP", "_Default_ArrayLiteralElement"]
+- ["s10SetAlgebraP", "_Default_Element"]
+- ["s10SetAlgebraP", "_Default_RawValue"]
+- ["s10SetAlgebraP", "contains"]
+- ["s10SetAlgebraP", "formIntersection"]
+- ["s10SetAlgebraP", "formSymmetricDifference"]
+- ["s10SetAlgebraP", "formUnion"]
+- ["s10SetAlgebraP", "init"]
+- ["s10SetAlgebraP", "insert"]
+- ["s10SetAlgebraP", "intersection"]
+- ["s10SetAlgebraP", "isDisjoint"]
+- ["s10SetAlgebraP", "isEmpty"]
+- ["s10SetAlgebraP", "isSubset"]
+- ["s10SetAlgebraP", "isSuperset"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagFileEvents"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagIgnoreSelf"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagMarkSelf"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagNoDefer"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagNone"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagUseCFTypes"]
+- ["s10SetAlgebraP", "kFSEventStreamCreateFlagWatchRoot"]
+- ["s10SetAlgebraP", "rawValue"]
+- ["s10SetAlgebraP", "remove"]
+- ["s10SetAlgebraP", "subtract"]
+- ["s10SetAlgebraP", "subtracting"]
+- ["s10SetAlgebraP", "symmetricDifference"]
+- ["s10SetAlgebraP", "union"]
+- ["s10SetAlgebraP", "update"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- ["7Witness10StreamTypeO", "__derived_enum_equals"]
+- ["7Witness10StreamTypeO", "deinit"]
+- ["7Witness10StreamTypeO", "diskBased"]
+- ["7Witness10StreamTypeO", "hash"]
+- ["7Witness10StreamTypeO", "hashValue"]
+- ["7Witness10StreamTypeO", "hostBased"]
+- !private ["Sx", "init"]
+- !private ["Sx", "subscript"]
+- !private ["s6UInt32V", "init"]
+- !private ["s6UInt64V", "init"]
+- !private ["SP", "subscript"]
+- !private ["SU", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "defaultMode"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "rawValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "rawValue"]
+- !private ["s8_PointerP", "subscript"]
+- !private ["s20_SwiftNewtypeWrapperP", "defaultMode"]
+- !private ["s20_SwiftNewtypeWrapperP", "rawValue"]
+depends-nominal:
+- !private "Sa"
+- !private "s13ArrayProtocolP"
+- !private "SK"
+- !private "Sz"
+- !private "So13CFRunLoopModea"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- "7Witness11EventStreamC"
+- "7Witness22EventStreamCreateFlagsV"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "So20FSEventStreamContextV"
+- !private "7Witness9FileEventV"
+- !private "7Witness14FileEventFlagsV"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "s6HasherV"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "So7NSArrayC"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So17NSFastEnumerationP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sj"
+- "s9OptionSetP"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "ST"
+- "s10SetAlgebraP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- "7Witness10StreamTypeO"
+- !private "Sx"
+- !private "s6UInt32V"
+- !private "s6UInt64V"
+- !private "SP"
+- !private "SU"
+- !private "s18_BitwiseOperationsP"
+- !private "s15_CVarArgAlignedP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "efe34d3c0ebb455180615908beef0ce2"

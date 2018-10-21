@@ -1,0 +1,65 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "main": ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule","<Witness.module>"]
+  "test": ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.xctest/Contents/MacOS/WitnessPackageTests","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.swiftmodule","<Witness.module>","<WitnessPackageTests.test>","<WitnessTests.module>"]
+  "Witness.module": ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule","<Witness.module>"]
+  "WitnessPackageTests.test": ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.xctest/Contents/MacOS/WitnessPackageTests","<WitnessPackageTests.test>"]
+  "WitnessTests.module": ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.swiftmodule","<WitnessTests.module>"]
+default: "main"
+commands: 
+  "<C.Witness.module>":
+    tool: phony
+    inputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule"]
+    outputs: ["<Witness.module>"]
+
+  "<C.WitnessPackageTests.test>":
+    tool: phony
+    inputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.xctest/Contents/MacOS/WitnessPackageTests"]
+    outputs: ["<WitnessPackageTests.test>"]
+
+  "<C.WitnessTests.module>":
+    tool: phony
+    inputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.swiftmodule"]
+    outputs: ["<WitnessTests.module>"]
+
+  "C.Witness.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Witness"
+    module-output-path: "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule"
+    inputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/EventStream.swift","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/FileEvent.swift","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/Witness.swift"]
+    outputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/EventStream.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/FileEvent.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/Witness.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule"]
+    import-paths: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug"]
+    temps-path: "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build"
+    objects: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/EventStream.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/FileEvent.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/Witness.swift.o"]
+    other-args: ["-swift-version","4.2","-enable-batch-mode","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/ModuleCache","-Xfrontend","-color-diagnostics"]
+    sources: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/EventStream.swift","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/FileEvent.swift","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Sources/Witness/Witness.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "C.WitnessPackageTests.test":
+    tool: shell
+    description: "Linking ./.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.xctest/Contents/MacOS/WitnessPackageTests"
+    inputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/EventStream.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/FileEvent.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.build/Witness.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.build/WitnessTests.swift.o"]
+    outputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.xctest/Contents/MacOS/WitnessPackageTests"]
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-g","-L","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug","-o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.xctest/Contents/MacOS/WitnessPackageTests","-module-name","WitnessPackageTests","-Xlinker","-bundle","@/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessPackageTests.product/Objects.LinkFileList"]
+
+  "C.WitnessTests.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "WitnessTests"
+    module-output-path: "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.swiftmodule"
+    inputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/Witness.swiftmodule","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Tests/WitnessTests/WitnessTests.swift"]
+    outputs: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.build/WitnessTests.swift.o","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.swiftmodule"]
+    import-paths: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug"]
+    temps-path: "/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.build"
+    objects: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/WitnessTests.build/WitnessTests.swift.o"]
+    other-args: ["-swift-version","4.2","-enable-batch-mode","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/.build/x86_64-apple-macosx10.10/debug/ModuleCache","-Xfrontend","-color-diagnostics"]
+    sources: ["/Users/spencerkohan/Projects/Personal/SwiftModules/Witness/Tests/WitnessTests/WitnessTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
