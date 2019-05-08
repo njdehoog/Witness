@@ -18,7 +18,7 @@ import Witness
 
 This will trigger an event when a file in the Desktop directory is created, deleted or modified.
 ```swift
-if let desktopPath = NSSearchPathForDirectoriesInDomains(.DesktopDirectory, .UserDomainMask, true).first {
+if let desktopPath = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true).first {
     self.witness = Witness(paths: [desktopPath], flags: .FileEvents, latency: 0.3) { events in
         print("file system events received: \(events)")
     }
